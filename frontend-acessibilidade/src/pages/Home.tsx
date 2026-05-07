@@ -9,8 +9,11 @@ export function Home() {
   const [lugares, setLugares] = useState<Lugar[]>([]);
   const [busca, setBusca] = useState('');
 
+  const [lugarSelecionado, setLugarSelecionado] =
+    useState<Lugar | null>(null);
+
   useEffect(() => {
-    setLugares([
+    const dados = [
       {
         id: 1,
         nome: 'Café Inclusivo',
@@ -70,7 +73,11 @@ export function Home() {
         temElevador: false,
         temPortaLarga: false,
       },
-    ]);
+    ];
+
+    setLugares(dados);
+
+    setLugarSelecionado(dados[0]);
   }, []);
 
   const lugaresFiltrados = useMemo(() => {
@@ -96,56 +103,84 @@ export function Home() {
 
         </div>
 
-        <div className="legenda-box">
+        {lugarSelecionado && (
+          <div className="info-box">
 
-          <h2>Legenda</h2>
+            <div className="info-header">
 
-          <div className="legend-card">
-            <div className="circle verde">
-              ♿
+              <div
+                className={`status-icon ${
+                  lugarSelecionado.statusAcessibilidade ===
+                  'ACESSIVEL'
+                    ? 'verde'
+                    : lugarSelecionado.statusAcessibilidade.includes(
+                        'PARCIAL'
+                      )
+                    ? 'amarelo'
+                    : 'vermelho'
+                }`}
+              >
+                ♿
+              </div>
+
+              <div>
+                <h2>
+                  {lugarSelecionado.nome}
+                </h2>
+
+                <span
+                  className={`status-badge ${
+                    lugarSelecionado.statusAcessibilidade ===
+                    'ACESSIVEL'
+                      ? 'badge-verde'
+                      : lugarSelecionado.statusAcessibilidade.includes(
+                          'PARCIAL'
+                        )
+                      ? 'badge-amarelo'
+                      : 'badge-vermelho'
+                  }`}
+                >
+                  {
+                    lugarSelecionado.statusAcessibilidade
+                  }
+                </span>
+              </div>
             </div>
 
-            <div>
-              <h3>Acessível</h3>
+            <p className="endereco">
+              {lugarSelecionado.descricao}
+            </p>
 
-              <p>
-                Totalmente acessível
-                para cadeirantes
-              </p>
+            <div className="recursos-info">
+
+              {lugarSelecionado.temRampa && (
+                <div className="recurso-item">
+                  ✅ Rampa de acesso
+                </div>
+              )}
+
+              {lugarSelecionado.temBanheiroAcessivel && (
+                <div className="recurso-item">
+                  ✅ Banheiro acessível
+                </div>
+              )}
+
+              {lugarSelecionado.temPortaLarga && (
+                <div className="recurso-item">
+                  ✅ Porta larga
+                </div>
+              )}
+
+              {lugarSelecionado.temElevador && (
+                <div className="recurso-item">
+                  ✅ Elevador
+                </div>
+              )}
+
             </div>
           </div>
+        )}
 
-          <div className="legend-card">
-            <div className="circle amarelo">
-              ♿
-            </div>
-
-            <div>
-              <h3>
-                Parcialmente acessível
-              </h3>
-
-              <p>
-                Possui algumas barreiras
-              </p>
-            </div>
-          </div>
-
-          <div className="legend-card">
-            <div className="circle vermelho">
-              ♿
-            </div>
-
-            <div>
-              <h3>Não acessível</h3>
-
-              <p>
-                Possui barreiras de acesso
-              </p>
-            </div>
-          </div>
-
-        </div>
       </aside>
 
       <main className="map-content">
@@ -170,7 +205,13 @@ export function Home() {
           </button>
         </div>
 
-        <Mapa lugares={lugaresFiltrados} />
+        <Mapa
+          lugares={lugaresFiltrados}
+          onSelecionarLugar={
+            setLugarSelecionado
+          }
+        />
+
       </main>
     </div>
   );
