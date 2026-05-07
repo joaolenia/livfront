@@ -22,18 +22,29 @@ interface Props {
   ) => void;
 }
 
-const criarIcone = (cor: string) =>
-  new L.Icon({
-    iconUrl: `https://maps.google.com/mapfiles/ms/icons/${cor}-dot.png`,
-    iconSize: [42, 42],
-    iconAnchor: [21, 42],
-    popupAnchor: [0, -38],
+/* ÍCONE PERSONALIZADO */
+
+const criarIcone = (
+  cor: string
+) =>
+  new L.DivIcon({
+    className: 'custom-marker',
+
+    html: `
+      <div class="marker-wrapper ${cor}">
+        <img src="/rodas.png" />
+      </div>
+    `,
+
+    iconSize: [52, 52],
+    iconAnchor: [26, 52],
+    popupAnchor: [0, -48],
   });
 
 const icones = {
-  verde: criarIcone('green'),
-  amarelo: criarIcone('yellow'),
-  vermelho: criarIcone('red'),
+  verde: criarIcone('verde'),
+  amarelo: criarIcone('amarelo'),
+  vermelho: criarIcone('vermelho'),
 };
 
 export function Mapa({
@@ -64,7 +75,8 @@ export function Mapa({
             lugar.localizacao.coordinates;
 
           const icon =
-            lugar.statusAcessibilidade === 'ACESSIVEL'
+            lugar.statusAcessibilidade ===
+            'ACESSIVEL'
               ? icones.verde
               : lugar.statusAcessibilidade.includes(
                   'PARCIAL'
@@ -88,12 +100,29 @@ export function Mapa({
 
                   <div className="popup-top">
 
-                    <div className="popup-icon">
-                      ♿
+                    <div
+                      className={`popup-icon ${
+                        lugar.statusAcessibilidade ===
+                        'ACESSIVEL'
+                          ? 'verde'
+                          : lugar.statusAcessibilidade.includes(
+                              'PARCIAL'
+                            )
+                          ? 'amarelo'
+                          : 'vermelho'
+                      }`}
+                    >
+                      <img
+                        src="/rodas.png"
+                        alt=""
+                      />
                     </div>
 
                     <div>
-                      <h3>{lugar.nome}</h3>
+
+                      <h3>
+                        {lugar.nome}
+                      </h3>
 
                       <span
                         className={`popup-badge ${
@@ -107,14 +136,12 @@ export function Mapa({
                             : 'nao'
                         }`}
                       >
-                        {lugar.statusAcessibilidade}
+                        {
+                          lugar.statusAcessibilidade
+                        }
                       </span>
                     </div>
                   </div>
-
-                  <p className="popup-endereco">
-                    {lugar.descricao}
-                  </p>
 
                 </div>
               </Popup>
@@ -143,4 +170,4 @@ export function Mapa({
       </div>
     </div>
   );
-} 
+}

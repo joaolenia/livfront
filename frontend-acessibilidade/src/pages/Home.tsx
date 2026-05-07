@@ -6,22 +6,24 @@ import type { Lugar } from '../types/lugar';
 import { Mapa } from '../components/Mapa';
 
 export function Home() {
-  const [lugares, setLugares] = useState<Lugar[]>([]);
-  const [busca, setBusca] = useState('');
+  const [lugares, setLugares] =
+    useState<Lugar[]>([]);
 
-  const [lugarSelecionado, setLugarSelecionado] =
-    useState<Lugar | null>(null);
+  const [busca, setBusca] =
+    useState('');
 
+  const [
+    lugarSelecionado,
+    setLugarSelecionado,
+  ] = useState<Lugar | null>(null);
   useEffect(() => {
-    const dados = [
+    const dados: Lugar[] = [
       {
         id: 1,
         nome: 'Café Inclusivo',
-        descricao:
-          'R. Frei Caneca, 1234 - Consolação',
+        descricao: 'R. Frei Caneca, 1234 - Consolação',
 
-        statusAcessibilidade:
-          'ACESSIVEL',
+        statusAcessibilidade: 'ACESSIVEL',
 
         localizacao: {
           type: 'Point',
@@ -37,8 +39,7 @@ export function Home() {
       {
         id: 2,
         nome: 'Mercado Central',
-        descricao:
-          'Av. Principal, 550',
+        descricao: 'Av. Principal, 550',
 
         statusAcessibilidade:
           'PARCIALMENTE ACESSIVEL',
@@ -57,11 +58,10 @@ export function Home() {
       {
         id: 3,
         nome: 'Loja Antiga',
-        descricao:
-          'Rua XV, 221',
+        descricao: 'Rua XV, 221',
 
         statusAcessibilidade:
-          'NAO ACESSIVEL',
+          'INACESSIVEL',
 
         localizacao: {
           type: 'Point',
@@ -76,17 +76,20 @@ export function Home() {
     ];
 
     setLugares(dados);
-
     setLugarSelecionado(dados[0]);
   }, []);
 
-  const lugaresFiltrados = useMemo(() => {
-    return lugares.filter((lugar) =>
-      lugar.nome
-        .toLowerCase()
-        .includes(busca.toLowerCase())
-    );
-  }, [lugares, busca]);
+  const lugaresFiltrados =
+    useMemo(() => {
+      return lugares.filter(
+        (lugar) =>
+          lugar.nome
+            .toLowerCase()
+            .includes(
+              busca.toLowerCase()
+            )
+      );
+    }, [lugares, busca]);
 
   return (
     <div className="home-container">
@@ -103,84 +106,94 @@ export function Home() {
 
         </div>
 
-        {lugarSelecionado && (
-          <div className="info-box">
+        {/* SOMENTE ESSA ÁREA ROLA */}
+        <div className="sidebar-scroll">
 
-            <div className="info-header">
+          {lugarSelecionado && (
+            <div className="info-box">
 
-              <div
-                className={`status-icon ${
-                  lugarSelecionado.statusAcessibilidade ===
-                  'ACESSIVEL'
-                    ? 'verde'
-                    : lugarSelecionado.statusAcessibilidade.includes(
+              <div className="info-header">
+
+                <div
+                  className={`status-icon ${lugarSelecionado.statusAcessibilidade ===
+                      'ACESSIVEL'
+                      ? 'verde'
+                      : lugarSelecionado.statusAcessibilidade.includes(
                         'PARCIAL'
                       )
-                    ? 'amarelo'
-                    : 'vermelho'
-                }`}
-              >
-                ♿
-              </div>
+                        ? 'amarelo'
+                        : 'vermelho'
+                    }`}
+                >
+                  <img
+                    src="/rodas.png"
+                    alt=""
+                  />
+                </div>
 
-              <div>
-                <h2>
-                  {lugarSelecionado.nome}
-                </h2>
+                <div>
 
-                <span
-                  className={`status-badge ${
-                    lugarSelecionado.statusAcessibilidade ===
-                    'ACESSIVEL'
-                      ? 'badge-verde'
-                      : lugarSelecionado.statusAcessibilidade.includes(
+                  <h2>
+                    {
+                      lugarSelecionado.nome
+                    }
+                  </h2>
+
+                  <span
+                    className={`status-badge ${lugarSelecionado.statusAcessibilidade ===
+                        'ACESSIVEL'
+                        ? 'badge-verde'
+                        : lugarSelecionado.statusAcessibilidade.includes(
                           'PARCIAL'
                         )
-                      ? 'badge-amarelo'
-                      : 'badge-vermelho'
-                  }`}
-                >
-                  {
-                    lugarSelecionado.statusAcessibilidade
-                  }
-                </span>
+                          ? 'badge-amarelo'
+                          : 'badge-vermelho'
+                      }`}
+                  >
+                    {
+                      lugarSelecionado.statusAcessibilidade
+                    }
+                  </span>
+                </div>
+              </div>
+
+              <p className="endereco">
+                {
+                  lugarSelecionado.descricao
+                }
+              </p>
+
+              <div className="recursos-info">
+
+                {lugarSelecionado.temRampa && (
+                  <div className="recurso-item">
+                    ✅ Rampa de acesso
+                  </div>
+                )}
+
+                {lugarSelecionado.temBanheiroAcessivel && (
+                  <div className="recurso-item">
+                    ✅ Banheiro acessível
+                  </div>
+                )}
+
+                {lugarSelecionado.temPortaLarga && (
+                  <div className="recurso-item">
+                    ✅ Porta larga
+                  </div>
+                )}
+
+                {lugarSelecionado.temElevador && (
+                  <div className="recurso-item">
+                    ✅ Elevador
+                  </div>
+                )}
+
               </div>
             </div>
+          )}
 
-            <p className="endereco">
-              {lugarSelecionado.descricao}
-            </p>
-
-            <div className="recursos-info">
-
-              {lugarSelecionado.temRampa && (
-                <div className="recurso-item">
-                  ✅ Rampa de acesso
-                </div>
-              )}
-
-              {lugarSelecionado.temBanheiroAcessivel && (
-                <div className="recurso-item">
-                  ✅ Banheiro acessível
-                </div>
-              )}
-
-              {lugarSelecionado.temPortaLarga && (
-                <div className="recurso-item">
-                  ✅ Porta larga
-                </div>
-              )}
-
-              {lugarSelecionado.temElevador && (
-                <div className="recurso-item">
-                  ✅ Elevador
-                </div>
-              )}
-
-            </div>
-          </div>
-        )}
-
+        </div>
       </aside>
 
       <main className="map-content">
@@ -188,6 +201,7 @@ export function Home() {
         <div className="top-search">
 
           <div className="search-box">
+
             <span>🔍</span>
 
             <input
@@ -195,7 +209,9 @@ export function Home() {
               placeholder="Buscar endereço ou comércio..."
               value={busca}
               onChange={(e) =>
-                setBusca(e.target.value)
+                setBusca(
+                  e.target.value
+                )
               }
             />
           </div>
