@@ -16,6 +16,10 @@ import type { Lugar } from '../types/lugar';
 
 interface Props {
   lugares: Lugar[];
+
+  onSelecionarLugar: (
+    lugar: Lugar
+  ) => void;
 }
 
 const criarIcone = (cor: string) =>
@@ -32,11 +36,15 @@ const icones = {
   vermelho: criarIcone('red'),
 };
 
-export function Mapa({ lugares }: Props) {
+export function Mapa({
+  lugares,
+  onSelecionarLugar,
+}: Props) {
   const center = [-26.426072, -51.306651] as LatLngExpression;
 
   return (
     <div className="mapa-wrapper">
+
       <MapContainer
         center={center}
         zoom={15}
@@ -69,10 +77,17 @@ export function Mapa({ lugares }: Props) {
               key={lugar.id}
               position={[lat, lng]}
               icon={icon}
+
+              eventHandlers={{
+                click: () =>
+                  onSelecionarLugar(lugar),
+              }}
             >
               <Popup>
                 <div className="popup-card">
+
                   <div className="popup-top">
+
                     <div className="popup-icon">
                       ♿
                     </div>
@@ -101,23 +116,6 @@ export function Mapa({ lugares }: Props) {
                     {lugar.descricao}
                   </p>
 
-                  <div className="popup-recursos">
-                    {lugar.temRampa && (
-                      <span>✅ Rampa</span>
-                    )}
-
-                    {lugar.temBanheiroAcessivel && (
-                      <span>
-                        ✅ Banheiro acessível
-                      </span>
-                    )}
-
-                    {lugar.temPortaLarga && (
-                      <span>
-                        ✅ Porta larga
-                      </span>
-                    )}
-                  </div>
                 </div>
               </Popup>
             </Marker>
@@ -126,6 +124,7 @@ export function Mapa({ lugares }: Props) {
       </MapContainer>
 
       <div className="bottom-legenda">
+
         <div className="legenda-mini">
           <div className="dot verde"></div>
           <span>Acessível</span>
@@ -140,7 +139,8 @@ export function Mapa({ lugares }: Props) {
           <div className="dot vermelho"></div>
           <span>Não acessível</span>
         </div>
+
       </div>
     </div>
   );
-}
+} 

@@ -7,6 +7,7 @@
 body {
   font-family: Inter, sans-serif;
   background: #f8fafc;
+  overflow: hidden;
 }
 
 .home-container {
@@ -19,72 +20,79 @@ body {
 /* SIDEBAR */
 
 .sidebar {
-  width: 400px;
+  width: 360px;
+
   background: linear-gradient(
     180deg,
     #003b7a,
     #0b1f3a
   );
 
-  color: white;
-
   display: flex;
   flex-direction: column;
 
   position: relative;
-
   z-index: 999;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3)
+    transparent;
 }
 
-/* IMAGEM SUPERIOR */
+/* SCROLL */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 999px;
+}
+
+/* IMAGEM */
 
 .sidebar-top {
   width: 100%;
-  padding: 0;
+  flex-shrink: 0;
 }
 
 .top-image {
   width: 100%;
-  height: auto;
   display: block;
-  object-fit: cover;
 }
 
-/* LEGENDA */
+/* INFO LOCAL */
 
-.legenda-box {
+.info-box {
   background: white;
-  color: #0f172a;
 
-  margin: 24px;
+  margin: 20px;
 
-  border-radius: 28px;
+  border-radius: 24px;
 
-  padding: 24px;
+  padding: 20px;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  flex-shrink: 0;
 }
 
-.legenda-box h2 {
-  margin-bottom: 22px;
-  font-size: 30px;
-}
-
-.legend-card {
+.info-header {
   display: flex;
-  gap: 18px;
-
-  padding: 18px;
-  border: 1px solid #e2e8f0;
-
-  border-radius: 22px;
-
-  margin-bottom: 16px;
+  gap: 14px;
+  align-items: center;
 }
 
-.circle {
-  min-width: 58px;
-  height: 58px;
+.status-icon {
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
 
   display: flex;
@@ -92,31 +100,86 @@ body {
   justify-content: center;
 
   color: white;
-  font-size: 28px;
+  font-size: 24px;
+
+  flex-shrink: 0;
 }
 
-.legend-card h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.legend-card p {
-  color: #64748b;
-  line-height: 1.4;
-}
-
-/* CORES */
-
-.verde {
+.status-icon.verde {
   background: #22c55e;
 }
 
-.amarelo {
+.status-icon.amarelo {
   background: #facc15;
 }
 
-.vermelho {
+.status-icon.vermelho {
   background: #ef4444;
+}
+
+.info-header h2 {
+  color: #0f172a;
+  font-size: 20px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+
+  word-break: break-word;
+}
+
+.status-badge {
+  display: inline-flex;
+
+  padding: 5px 12px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge-verde {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-amarelo {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-vermelho {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.endereco {
+  margin-top: 18px;
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.recursos-info {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recurso-item {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  padding: 12px;
+
+  color: #334155;
+
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* MAPA */
@@ -126,64 +189,63 @@ body {
   position: relative;
 }
 
-/* TOPO */
+/* BUSCA */
 
 .top-search {
   position: absolute;
-  top: 24px;
-  left: 36px;
-  right: 36px;
+  top: 22px;
+  left: 32px;
+  right: 32px;
 
   z-index: 1000;
 
   display: flex;
-  gap: 20px;
+  gap: 16px;
 }
 
 .search-box {
   flex: 1;
-  height: 72px;
+  height: 64px;
 
   background: white;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
   display: flex;
   align-items: center;
 
-  padding: 0 26px;
+  padding: 0 22px;
 
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 .search-box span {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .search-box input {
   flex: 1;
 
-  margin-left: 16px;
+  margin-left: 14px;
 
   border: none;
   outline: none;
 
-  font-size: 18px;
-  color: #0f172a;
+  font-size: 16px;
 
   background: transparent;
 }
 
 .filter-btn {
-  width: 150px;
+  width: 135px;
   border: none;
 
-  border-radius: 22px;
+  border-radius: 20px;
 
   background: #003b7a;
   color: white;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
 
   cursor: pointer;
