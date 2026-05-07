@@ -1,7 +1,9 @@
+import { CadastroLugares } from './pages/CadastroLugares';
 import { Home } from './pages/Home';
 
+
 function App() {
-  return <Home />;
+  return <CadastroLugares />;
 }
 
 export default App;
