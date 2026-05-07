@@ -10,7 +10,7 @@ export function Home() {
     setLugares([
       {
         id: 1,
-        nome: 'ESCOLA ELAY ',
+        nome: 'ESCOLA ELAY3424 ',
         descricao: 'Escola não sei do que',
         statusAcessibilidade: 'ACESSIVEL',
         localizacao: {  
@@ -30,6 +30,20 @@ export function Home() {
         localizacao: {  
           type: 'Point',
             coordinates: [-51.30595050181997,-26.424325200966045],
+        },
+        temRampa: true,
+        temBanheiroAcessivel: true,
+        temElevador: false,
+        temPortaLarga: false,
+      },
+                  {
+        id: 3,
+        nome: 'SEBBEN BEM VIVER ',
+        descricao: 'Provavelmente vende peçaj',
+        statusAcessibilidade: 'ACESSIVEL',
+        localizacao: {  
+          type: 'Point',
+            coordinates: [-51.306546041677315,-26.424730573443192],
         },
         temRampa: true,
         temBanheiroAcessivel: true,
