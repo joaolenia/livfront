@@ -10,7 +10,7 @@ export function Home() {
     setLugares([
             {
         id: 1,
-        nome: 'COMÉRCIO DE PEÇAS MABE ',
+        nome: 'COMÉRCIO DE PEÇAS MABE E VETERINARIA',
         descricao: 'Provavelmente vende peçaj',
         statusAcessibilidade: 'PARCIALMENTE ACESSIVEL',
         localizacao: {  
