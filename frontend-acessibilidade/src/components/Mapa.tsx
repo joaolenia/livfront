@@ -3,6 +3,7 @@ import {
   TileLayer,
   Marker,
   Popup,
+  ZoomControl,
 } from 'react-leaflet';
 
 import type { LatLngExpression } from 'leaflet';
@@ -17,76 +18,105 @@ interface Props {
   lugares: Lugar[];
 }
 
-const iconAcessivel = new L.Icon({
-  iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
-  iconSize: [35, 35],
-});
+const criarIcone = (cor: string) =>
+  new L.Icon({
+    iconUrl: `https://maps.google.com/mapfiles/ms/icons/${cor}-dot.png`,
+    iconSize: [42, 42],
+    iconAnchor: [21, 42],
+    popupAnchor: [0, -38],
+  });
+
+const icones = {
+  verde: criarIcone('green'),
+  amarelo: criarIcone('yellow'),
+  vermelho: criarIcone('red'),
+};
 
 export function Mapa({ lugares }: Props) {
   const center = [-26.426072, -51.306651] as LatLngExpression;
 
   return (
-    <div className="mapa-container">
+    <div className="mapa-wrapper">
       <MapContainer
         center={center}
         zoom={15}
         scrollWheelZoom={true}
         className="mapa"
+        zoomControl={false}
       >
+        <ZoomControl position="bottomright" />
+
         <TileLayer
           attribution="&copy; OpenStreetMap"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
         {lugares.map((lugar) => {
-          const [lng, lat] = lugar.localizacao.coordinates;
+          const [lng, lat] =
+            lugar.localizacao.coordinates;
+
+          const icon =
+            lugar.statusAcessibilidade === 'ACESSIVEL'
+              ? icones.verde
+              : lugar.statusAcessibilidade.includes(
+                  'PARCIAL'
+                )
+              ? icones.amarelo
+              : icones.vermelho;
 
           return (
             <Marker
               key={lugar.id}
               position={[lat, lng]}
-              icon={iconAcessivel}
+              icon={icon}
             >
               <Popup>
-                <div className="popup-content">
-                  <h3>{lugar.nome}</h3>
+                <div className="popup-card">
+                  <div className="popup-top">
+                    <div className="popup-icon">
+                      ♿
+                    </div>
 
-                  <p>{lugar.descricao}</p>
+                    <div>
+                      <h3>{lugar.nome}</h3>
 
-                  <span
-                    className={`status ${
-                      lugar.statusAcessibilidade
-                        .toLowerCase()
-                        .includes('parcial')
-                        ? 'parcial'
-                        : 'acessivel'
-                    }`}
-                  >
-                    {lugar.statusAcessibilidade}
-                  </span>
+                      <span
+                        className={`popup-badge ${
+                          lugar.statusAcessibilidade.includes(
+                            'PARCIAL'
+                          )
+                            ? 'parcial'
+                            : lugar.statusAcessibilidade ===
+                              'ACESSIVEL'
+                            ? 'acessivel'
+                            : 'nao'
+                        }`}
+                      >
+                        {lugar.statusAcessibilidade}
+                      </span>
+                    </div>
+                  </div>
 
-                  <div className="recursos">
-                    <span>
-                      {lugar.temRampa ? '✅ Rampa' : '❌ Sem rampa'}
-                    </span>
+                  <p className="popup-endereco">
+                    {lugar.descricao}
+                  </p>
 
-                    <span>
-                      {lugar.temBanheiroAcessivel
-                        ? '✅ Banheiro'
-                        : '❌ Banheiro'}
-                    </span>
+                  <div className="popup-recursos">
+                    {lugar.temRampa && (
+                      <span>✅ Rampa</span>
+                    )}
 
-                    <span>
-                      {lugar.temElevador
-                        ? '✅ Elevador'
-                        : '❌ Elevador'}
-                    </span>
+                    {lugar.temBanheiroAcessivel && (
+                      <span>
+                        ✅ Banheiro acessível
+                      </span>
+                    )}
 
-                    <span>
-                      {lugar.temPortaLarga
-                        ? '✅ Porta larga'
-                        : '❌ Porta larga'}
-                    </span>
+                    {lugar.temPortaLarga && (
+                      <span>
+                        ✅ Porta larga
+                      </span>
+                    )}
                   </div>
                 </div>
               </Popup>
@@ -94,6 +124,23 @@ export function Mapa({ lugares }: Props) {
           );
         })}
       </MapContainer>
+
+      <div className="bottom-legenda">
+        <div className="legenda-mini">
+          <div className="dot verde"></div>
+          <span>Acessível</span>
+        </div>
+
+        <div className="legenda-mini">
+          <div className="dot amarelo"></div>
+          <span>Parcialmente acessível</span>
+        </div>
+
+        <div className="legenda-mini">
+          <div className="dot vermelho"></div>
+          <span>Não acessível</span>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,149 +5,201 @@
 }
 
 body {
-  background: #f1f5f9;
   font-family: Inter, sans-serif;
+  background: #f8fafc;
 }
 
 .home-container {
-  display: flex;
+  width: 100%;
   height: 100vh;
+  display: flex;
   overflow: hidden;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  width: 380px;
-  background: white;
-  padding: 24px;
+  width: 400px;
+  background: linear-gradient(
+    180deg,
+    #003b7a,
+    #0b1f3a
+  );
+
+  color: white;
+
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #e2e8f0;
-  gap: 24px;
+
+  position: relative;
+
+  z-index: 999;
 }
 
-.logo-area h1 {
-  font-size: 32px;
+/* IMAGEM SUPERIOR */
+
+.sidebar-top {
+  width: 100%;
+  padding: 0;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* LEGENDA */
+
+.legenda-box {
+  background: white;
   color: #0f172a;
+
+  margin: 24px;
+
+  border-radius: 28px;
+
+  padding: 24px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.legenda-box h2 {
+  margin-bottom: 22px;
+  font-size: 30px;
+}
+
+.legend-card {
+  display: flex;
+  gap: 18px;
+
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+
+  border-radius: 22px;
+
+  margin-bottom: 16px;
+}
+
+.circle {
+  min-width: 58px;
+  height: 58px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 28px;
+}
+
+.legend-card h3 {
+  font-size: 18px;
   margin-bottom: 6px;
 }
 
-.logo-area p {
+.legend-card p {
   color: #64748b;
-  font-size: 14px;
+  line-height: 1.4;
 }
 
-/* FILTROS */
+/* CORES */
 
-.filtros {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.verde {
+  background: #22c55e;
 }
 
-.filtros input,
-.filtros select {
-  width: 100%;
-  padding: 14px;
-  border-radius: 14px;
-  border: 1px solid #cbd5e1;
-  outline: none;
-  font-size: 14px;
-  transition: 0.2s;
+.amarelo {
+  background: #facc15;
 }
 
-.filtros input:focus,
-.filtros select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-}
-
-/* LISTA */
-
-.lista-lugares {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-.card-lugar {
-  background: #f8fafc;
-  border-radius: 18px;
-  padding: 18px;
-  transition: 0.2s;
-  border: 1px solid transparent;
-}
-
-.card-lugar:hover {
-  transform: translateY(-2px);
-  border-color: #cbd5e1;
-}
-
-.card-lugar h3 {
-  color: #0f172a;
-  margin-bottom: 8px;
-  font-size: 17px;
-}
-
-.card-lugar p {
-  color: #64748b;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.badge {
-  display: inline-flex;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.badge.acessivel {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.badge.parcial {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.infos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.infos span {
-  font-size: 13px;
-  color: #334155;
+.vermelho {
+  background: #ef4444;
 }
 
 /* MAPA */
 
-.mapa-area {
+.map-content {
   flex: 1;
-  padding: 20px;
+  position: relative;
+}
+
+/* TOPO */
+
+.top-search {
+  position: absolute;
+  top: 24px;
+  left: 36px;
+  right: 36px;
+
+  z-index: 1000;
+
+  display: flex;
+  gap: 20px;
+}
+
+.search-box {
+  flex: 1;
+  height: 72px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 26px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.search-box span {
+  font-size: 22px;
+}
+
+.search-box input {
+  flex: 1;
+
+  margin-left: 16px;
+
+  border: none;
+  outline: none;
+
+  font-size: 18px;
+  color: #0f172a;
+
+  background: transparent;
+}
+
+.filter-btn {
+  width: 150px;
+  border: none;
+
+  border-radius: 22px;
+
+  background: #003b7a;
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* RESPONSIVO */
 
-@media (max-width: 900px) {
-  .home-container {
-    flex-direction: column;
-  }
-
+@media (max-width: 1200px) {
   .sidebar {
-    width: 100%;
-    height: 45%;
+    display: none;
   }
 
-  .mapa-area {
-    height: 55%;
+  .top-search {
+    left: 20px;
+    right: 20px;
   }
 }
