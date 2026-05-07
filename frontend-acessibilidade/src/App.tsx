@@ -3,7 +3,7 @@ import { Home } from './pages/Home';
 
 
 function App() {
-  return <CadastroLugares />;
+  return <Home />;
 }
 
 export default App;
