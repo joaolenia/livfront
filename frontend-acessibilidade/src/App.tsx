@@ -1,10 +1,16 @@
+import {
+  Routes,
+  Route
+} from 'react-router-dom';
+
+import { Home } from './pages/Home';
+import { Perfil } from './pages/Perfil';
 import { CadastroLugares } from './pages/CadastroLugares';
 import { Home } from './pages/Home';
-import { CadastroUsuarios } from './pages/CadastroUsuarios';
 
 
 function App() {
-  return <CadastroUsuarios />;
+  return <CadastroLugares />;
 }
 
 export default App;

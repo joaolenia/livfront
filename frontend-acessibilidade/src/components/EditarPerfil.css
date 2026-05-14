@@ -1,0 +1,126 @@
+.editar-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.editar-modal {
+  width: 100%;
+  max-width: 500px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 30px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+
+  animation: aparecer 0.25s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.editar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.editar-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+  font-size: 28px;
+}
+
+.editar-close {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #f1f5f9;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.editar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editar-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editar-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.editar-group input {
+  height: 52px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+
+  padding: 0 16px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.editar-group input:focus {
+  border-color: #0056b3;
+}
+
+.editar-salvar {
+  height: 54px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #003b7a,
+    #0056b3
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
