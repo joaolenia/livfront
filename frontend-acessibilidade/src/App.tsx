@@ -23,6 +23,8 @@ function App() {
         element={<Perfil />}
       />
 
+      
+   
       <Route
         path="/cadastro"
         element={<CadastroLugares />}
