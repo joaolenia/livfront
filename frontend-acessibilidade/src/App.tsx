@@ -15,11 +15,9 @@ function App() {
 
   function handleLogin(email: string, senha: string) {
 
-    // 🔐 SIMULAÇÃO (depois você pode ligar com backend)
     if (email === 'admin@email.com' && senha === '123456') {
       
-      // redireciona pra home
-      navigate('/');
+      navigate('/home');
 
     } else {
       alert('Email ou senha inválidos');
@@ -30,7 +28,7 @@ function App() {
     <Routes>
 
       <Route
-        path="/"
+        path="/home"
         element={<Home />}
       />
 
@@ -40,7 +38,7 @@ function App() {
       />
 
       <Route
-        path="/login"
+        path="/"
         element={<Login onLogin={handleLogin} />}
       />
 

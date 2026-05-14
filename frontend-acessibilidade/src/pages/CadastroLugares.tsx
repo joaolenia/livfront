@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './CadastroLugares.css';
 
 import type { Lugar } from '../types/lugar';
+import { Link } from 'react-router-dom';
 
 interface Props {
   onAdicionarLugar: (
@@ -115,7 +116,9 @@ export function CadastroLugares({
             acessíveis ao mapa.
           </p>
         </div>
-        <button className='voltar'>HOME</button>
+        <Link to="/home">
+          <button className='voltar'>HOME</button>
+        </Link>
       </aside>
 
       <main className="cad-content">
@@ -215,9 +218,9 @@ export function CadastroLugares({
               onChange={(e) =>
                 setStatusAcessibilidade(
                   e.target.value as
-                    | 'ACESSIVEL'
-                    | 'PARCIALMENTE ACESSIVEL'
-                    | 'INACESSIVEL'
+                  | 'ACESSIVEL'
+                  | 'PARCIALMENTE ACESSIVEL'
+                  | 'INACESSIVEL'
                 )
               }
             >
