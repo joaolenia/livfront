@@ -9,46 +9,42 @@ body {
   background: #f8fafc;
 }
 
+/* =========================
+   CONTAINER
+========================= */
+
 .cadastro-container {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
 }
 
-/* SIDEBAR */
+/* =========================
+   SIDEBAR
+========================= */
 
 .cadastro-sidebar {
   width: 420px;
-
   background: linear-gradient(
     180deg,
     #003b7a,
     #0b1f3a
   );
-
   position: relative;
-
   overflow: hidden;
 }
 
-.cadastro-header {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
+
 
 .cadastro-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   opacity: 0.3;
 }
 
 .overlay {
   position: absolute;
-
   inset: 0;
 
   display: flex;
@@ -56,60 +52,59 @@ body {
   justify-content: center;
 
   padding: 40px;
-
   color: white;
 }
 
 .overlay h1 {
   font-size: 42px;
-  line-height: 1.1;
-
   margin-bottom: 18px;
 }
 
 .overlay p {
   font-size: 18px;
   color: #cbd5e1;
-
-  line-height: 1.6;
 }
 
-/* FORM */
+/* =========================
+   CONTEÚDO
+========================= */
 
 .cadastro-content {
   flex: 1;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   padding: 40px;
 }
 
+/* FORM PRINCIPAL */
 .cadastro-form {
-  width: 100%;
+  width: 70%;
+
   max-width: 760px;
 
   background: white;
-
   border-radius: 32px;
 
-  padding: 40px;
+  padding: 50px;
 
-  box-shadow: 0 20px 50px
-    rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .cadastro-form h2 {
   font-size: 34px;
-  color: #0f172a;
-
   margin-bottom: 32px;
+  color: #0f172a;
 }
+
+/* =========================
+   INPUTS
+========================= */
 
 .form-group {
   margin-bottom: 24px;
-
   display: flex;
   flex-direction: column;
 }
@@ -117,10 +112,8 @@ body {
 .form-group label {
   font-size: 16px;
   font-weight: 600;
-
-  color: #0f172a;
-
   margin-bottom: 10px;
+  color: #0f172a;
 }
 
 .form-group input,
@@ -128,41 +121,38 @@ body {
   height: 64px;
 
   border: 1px solid #cbd5e1;
-
   border-radius: 18px;
 
   padding: 0 20px;
-
   font-size: 16px;
 
   outline: none;
-
   transition: 0.2s;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   border-color: #003b7a;
-
-  box-shadow: 0 0 0 4px
-    rgba(0, 59, 122, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 59, 122, 0.1);
 }
+
+/* =========================
+   GRID
+========================= */
 
 .grid-2 {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
 }
 
-/* CHECKBOX */
+/* =========================
+   CHECKBOX
+========================= */
 
 .checkbox-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 18px;
 
   margin-top: 10px;
@@ -171,7 +161,6 @@ body {
 
 .checkbox-grid label {
   background: #f8fafc;
-
   border: 1px solid #e2e8f0;
 
   border-radius: 18px;
@@ -180,11 +169,9 @@ body {
 
   display: flex;
   align-items: center;
-
   gap: 12px;
 
   font-weight: 600;
-
   color: #334155;
 }
 
@@ -193,18 +180,18 @@ body {
   height: 20px;
 }
 
-/* BOTÃO */
+/* =========================
+   BOTÃO
+========================= */
 
 .submit-btn {
   width: 100%;
   height: 68px;
 
   border: none;
-
   border-radius: 22px;
 
   background: #003b7a;
-
   color: white;
 
   font-size: 18px;
@@ -214,8 +201,7 @@ body {
 
   transition: 0.2s;
 
-  box-shadow: 0 10px 25px
-    rgba(0, 59, 122, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 59, 122, 0.2);
 }
 
 .submit-btn:hover {
@@ -223,23 +209,127 @@ body {
   transform: translateY(-2px);
 }
 
-/* RESPONSIVO */
+/* =========================
+   NOTEBOOK (AJUSTE 30%)
+========================= */
 
-@media (max-width: 1000px) {
-  .cadastro-sidebar {
-    display: none;
+@media (max-width: 1440px) {
+  .cadastro-form {
+    max-width: 520px;
+    padding: 28px;
+    border-radius: 26px;
   }
 
   .cadastro-content {
-    padding: 20px;
+    padding: 24px;
+  }
+
+  .overlay h1 {
+    font-size: 34px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 56px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    height: 60px;
+    font-size: 17px;
+  }
+
+  .checkbox-grid label {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .cadastro-container {
+    flex-direction: column;
+  }
+
+  .cadastro-sidebar {
+    width: 100%;
+    height: 260px;
   }
 
   .cadastro-form {
-    padding: 28px;
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .cadastro-sidebar {
+    height: 220px;
   }
 
-  .grid-2,
+  .overlay {
+    padding: 24px;
+  }
+
+  .overlay h1 {
+    font-size: 30px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  .cadastro-content {
+    padding: 16px;
+  }
+
+  .cadastro-form {
+    border-radius: 28px 28px 0 0;
+    padding: 24px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
   .checkbox-grid {
     grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    height: 60px;
+  }
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
+@media (max-width: 480px) {
+  .overlay h1 {
+    font-size: 24px;
+  }
+
+  .overlay p {
+    font-size: 14px;
+  }
+
+  .cadastro-form h2 {
+    font-size: 24px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 52px;
   }
 }
