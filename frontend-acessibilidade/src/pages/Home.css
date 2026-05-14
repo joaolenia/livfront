@@ -36,8 +36,6 @@ body {
   overflow: hidden;
 }
 
-/* IMAGEM */
-
 .sidebar-top {
   width: 95%;
   flex-shrink: 0;
@@ -46,35 +44,26 @@ body {
 .top-image {
   margin-top: 10px;
   margin-left: 2.7%;
+
   width: 100%;
   height: 310px;
+
   object-fit: cover;
+
   display: block;
+
   border-radius: 10%;
 }
-
-/* SOMENTE ESSA ÁREA ROLA */
 
 .sidebar-scroll {
   flex: 1;
 
   overflow-y: auto;
-width: 100%;
+
+  width: 100%;
+
   padding: 14px;
-
-  scrollbar-width: thin;
 }
-
-.sidebar-scroll::-webkit-scrollbar {
-  width: 5px;
-}
-
-.sidebar-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.25);
-  border-radius: 999px;
-}
-
-/* INFO */
 
 .info-box {
   background: white;
@@ -101,13 +90,10 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  flex-shrink: 0;
 }
 
 .status-icon img {
   width: 24px;
-  height: 24px;
 }
 
 .status-icon.verde {
@@ -123,16 +109,16 @@ width: 100%;
 }
 
 .info-header h2 {
-  color: #0f172a;
   font-size: 17px;
-  margin-bottom: 4px;
-  line-height: 1.2;
 }
 
 .status-badge {
   display: inline-flex;
+
   padding: 5px 10px;
+
   border-radius: 999px;
+
   font-size: 10px;
   font-weight: 700;
 }
@@ -154,8 +140,11 @@ width: 100%;
 
 .endereco {
   margin-top: 14px;
+
   color: #64748b;
+
   line-height: 1.5;
+
   font-size: 13px;
 }
 
@@ -175,11 +164,36 @@ width: 100%;
   border-radius: 14px;
 
   padding: 10px 12px;
+}
 
-  color: #334155;
+.acoes-lugar {
+  margin-top: 18px;
 
-  font-weight: 500;
-  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-avaliacoes,
+.btn-avaliar {
+  height: 46px;
+
+  border: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.btn-avaliacoes {
+  background: #eff6ff;
+  color: #003b7a;
+}
+
+.btn-avaliar {
+  background: #003b7a;
+  color: white;
 }
 
 /* MAPA */
@@ -221,50 +235,48 @@ width: 100%;
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
-.search-box span {
-  font-size: 18px;
-}
-
 .search-box input {
   flex: 1;
-
-  margin-left: 12px;
 
   border: none;
   outline: none;
 
-  font-size: 14px;
-
-  background: transparent;
+  margin-left: 12px;
 }
 
-.filter-btn {
-  width: 115px;
+.filter-btn,
+.perfil-btn,
+.cadastro-btn {
+  height: 56px;
+
+  padding: 0 20px;
 
   border: none;
-
   border-radius: 18px;
 
-  background: #003b7a;
   color: white;
 
-  font-size: 14px;
   font-weight: 600;
 
   cursor: pointer;
-
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
 
-/* RESPONSIVO */
+.filter-btn {
+  background: #003b7a;
+}
+
+.perfil-btn {
+  background: #0f172a;
+}
+
+.cadastro-btn {
+  background: #22c55e;
+}
 
 @media (max-width: 1200px) {
+
   .sidebar {
     display: none;
   }
 
-  .top-search {
-    left: 16px;
-    right: 16px;
-  }
 }

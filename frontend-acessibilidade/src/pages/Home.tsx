@@ -5,7 +5,13 @@ import './Home.css';
 import type { Lugar } from '../types/lugar';
 import { Mapa } from '../components/Mapa';
 
+import { Link } from 'react-router-dom';
+
+import { Avaliar } from '../components/Avaliar';
+import { Avaliacoes } from '../components/Avaliacoes';
+
 export function Home() {
+
   const [lugares, setLugares] =
     useState<Lugar[]>([]);
 
@@ -16,18 +22,37 @@ export function Home() {
     lugarSelecionado,
     setLugarSelecionado,
   ] = useState<Lugar | null>(null);
+
+  const [
+    modalAvaliar,
+    setModalAvaliar
+  ] = useState(false);
+
+  const [
+    modalAvaliacoes,
+    setModalAvaliacoes
+  ] = useState(false);
+
   useEffect(() => {
+
     const dados: Lugar[] = [
+
       {
         id: 1,
         nome: 'Escola Elay',
-        descricao: 'R. Carlos Rotta, X - Gen. Carneiro',
 
-        statusAcessibilidade: 'ACESSIVEL',
+        descricao:
+          'R. Carlos Rotta, X - Gen. Carneiro',
+
+        statusAcessibilidade:
+          'ACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.306651, -26.426072],
+          coordinates: [
+            -51.306651,
+            -26.426072
+          ],
         },
 
         temRampa: true,
@@ -39,14 +64,19 @@ export function Home() {
       {
         id: 2,
         nome: 'Mercearia Bom Jesus',
-        descricao: 'R. Dom Carlos Eduardo Savóia Bandeira de Mello , X - Gen. Carneiro',
+
+        descricao:
+          'R. Dom Carlos Eduardo Savóia Bandeira de Mello, X - Gen. Carneiro',
 
         statusAcessibilidade:
           'PARCIALMENTE ACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.30490685753136, -26.425417544594616],
+          coordinates: [
+            -51.30490685753136,
+            -26.425417544594616
+          ],
         },
 
         temRampa: false,
@@ -58,14 +88,19 @@ export function Home() {
       {
         id: 3,
         nome: 'Mercearia São Miguel',
-        descricao: 'Rua Tancredo Neves, X - Gen. Carneiro',
+
+        descricao:
+          'Rua Tancredo Neves, X - Gen. Carneiro',
 
         statusAcessibilidade:
           'INACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.305645646717565, -26.42419511158366],
+          coordinates: [
+            -51.305645646717565,
+            -26.42419511158366
+          ],
         },
 
         temRampa: false,
@@ -77,10 +112,12 @@ export function Home() {
 
     setLugares(dados);
     setLugarSelecionado(dados[0]);
+
   }, []);
 
   const lugaresFiltrados =
     useMemo(() => {
+
       return lugares.filter(
         (lugar) =>
           lugar.nome
@@ -89,10 +126,26 @@ export function Home() {
               busca.toLowerCase()
             )
       );
+
     }, [lugares, busca]);
 
   return (
+
     <div className="home-container">
+
+      <Avaliar
+        aberto={modalAvaliar}
+        fechar={() =>
+          setModalAvaliar(false)
+        }
+      />
+
+      <Avaliacoes
+        aberto={modalAvaliacoes}
+        fechar={() =>
+          setModalAvaliacoes(false)
+        }
+      />
 
       <aside className="sidebar">
 
@@ -106,61 +159,63 @@ export function Home() {
 
         </div>
 
-        {/* SOMENTE ESSA ÁREA ROLA */}
         <div className="sidebar-scroll">
 
           {lugarSelecionado && (
+
             <div className="info-box">
 
               <div className="info-header">
 
                 <div
-                  className={`status-icon ${lugarSelecionado.statusAcessibilidade ===
-                      'ACESSIVEL'
+                  className={`status-icon ${
+                    lugarSelecionado.statusAcessibilidade ===
+                    'ACESSIVEL'
                       ? 'verde'
                       : lugarSelecionado.statusAcessibilidade.includes(
-                        'PARCIAL'
-                      )
-                        ? 'amarelo'
-                        : 'vermelho'
-                    }`}
+                          'PARCIAL'
+                        )
+                      ? 'amarelo'
+                      : 'vermelho'
+                  }`}
                 >
+
                   <img
                     src="/rodas.png"
                     alt=""
                   />
+
                 </div>
 
                 <div>
 
                   <h2>
-                    {
-                      lugarSelecionado.nome
-                    }
+                    {lugarSelecionado.nome}
                   </h2>
 
                   <span
-                    className={`status-badge ${lugarSelecionado.statusAcessibilidade ===
-                        'ACESSIVEL'
+                    className={`status-badge ${
+                      lugarSelecionado.statusAcessibilidade ===
+                      'ACESSIVEL'
                         ? 'badge-verde'
                         : lugarSelecionado.statusAcessibilidade.includes(
-                          'PARCIAL'
-                        )
-                          ? 'badge-amarelo'
-                          : 'badge-vermelho'
-                      }`}
+                            'PARCIAL'
+                          )
+                        ? 'badge-amarelo'
+                        : 'badge-vermelho'
+                    }`}
                   >
                     {
                       lugarSelecionado.statusAcessibilidade
                     }
                   </span>
+
                 </div>
+
               </div>
 
               <p className="endereco">
-                {
-                  lugarSelecionado.descricao
-                }
+                {lugarSelecionado.descricao}
               </p>
 
               <div className="recursos-info">
@@ -190,10 +245,35 @@ export function Home() {
                 )}
 
               </div>
+
+              <div className="acoes-lugar">
+
+                <button
+                  className="btn-avaliacoes"
+                  onClick={() =>
+                    setModalAvaliacoes(true)
+                  }
+                >
+                  ⭐ Ver avaliações
+                </button>
+
+                <button
+                  className="btn-avaliar"
+                  onClick={() =>
+                    setModalAvaliar(true)
+                  }
+                >
+                  ✍️ Avaliar local
+                </button>
+
+              </div>
+
             </div>
+
           )}
 
         </div>
+
       </aside>
 
       <main className="map-content">
@@ -214,11 +294,25 @@ export function Home() {
                 )
               }
             />
+
           </div>
 
           <button className="filter-btn">
             ☰ Filtros
           </button>
+
+          <Link to="/perfil">
+            <button className="perfil-btn">
+              👤 Perfil
+            </button>
+          </Link>
+
+          <Link to="/cadastro">
+            <button className="cadastro-btn">
+              ➕ Cadastro
+            </button>
+          </Link>
+
         </div>
 
         <Mapa
@@ -229,6 +323,7 @@ export function Home() {
         />
 
       </main>
+
     </div>
   );
 }
