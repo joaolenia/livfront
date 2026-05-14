@@ -20,14 +20,14 @@ export function Home() {
     const dados: Lugar[] = [
       {
         id: 1,
-        nome: 'Café Inclusivo',
-        descricao: 'R. Frei Caneca, 1234 - Consolação',
+        nome: 'Escola Elay',
+        descricao: 'R. Carlos Rotta, X - Gen. Carneiro',
 
         statusAcessibilidade: 'ACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.30595, -26.42432],
+          coordinates: [-51.306651, -26.426072],
         },
 
         temRampa: true,
@@ -38,34 +38,34 @@ export function Home() {
 
       {
         id: 2,
-        nome: 'Mercado Central',
-        descricao: 'Av. Principal, 550',
+        nome: 'Mercearia Bom Jesus',
+        descricao: 'R. Dom Carlos Eduardo Savóia Bandeira de Mello , X - Gen. Carneiro',
 
         statusAcessibilidade:
           'PARCIALMENTE ACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.30654, -26.42473],
+          coordinates: [-51.30490685753136, -26.425417544594616],
         },
 
-        temRampa: true,
+        temRampa: false,
         temBanheiroAcessivel: false,
         temElevador: false,
-        temPortaLarga: false,
+        temPortaLarga: true,
       },
 
       {
         id: 3,
-        nome: 'Loja Antiga',
-        descricao: 'Rua XV, 221',
+        nome: 'Mercearia São Miguel',
+        descricao: 'Rua Tancredo Neves, X - Gen. Carneiro',
 
         statusAcessibilidade:
           'INACESSIVEL',
 
         localizacao: {
           type: 'Point',
-          coordinates: [-51.3078, -26.4255],
+          coordinates: [-51.305645646717565, -26.42419511158366],
         },
 
         temRampa: false,

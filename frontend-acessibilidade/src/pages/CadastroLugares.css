@@ -7,6 +7,7 @@
 body {
   font-family: Inter, sans-serif;
   background: #f8fafc;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -24,7 +25,9 @@ body {
 ========================= */
 
 .cadastro-sidebar {
-  width: 420px;
+  width: 32%;
+  min-width: 280px;
+  max-width: 380px;
   background: linear-gradient(
     180deg,
     #003b7a,
@@ -81,21 +84,20 @@ body {
 
 /* FORM PRINCIPAL */
 .cadastro-form {
-  width: 70%;
+  width: 100%;
 
-  max-width: 760px;
+  max-width: 660px;
 
   background: white;
   border-radius: 32px;
-
-  padding: 50px;
+  padding: 32px;
 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .cadastro-form h2 {
-  font-size: 34px;
-  margin-bottom: 32px;
+  font-size: 28px;
+  margin-bottom: 24px;
   color: #0f172a;
 }
 
@@ -104,7 +106,7 @@ body {
 ========================= */
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 }
@@ -118,13 +120,13 @@ body {
 
 .form-group input,
 .form-group select {
-  height: 64px;
+  height: 52px;
 
   border: 1px solid #cbd5e1;
   border-radius: 18px;
 
-  padding: 0 20px;
-  font-size: 16px;
+  padding: 0 16px;
+  font-size: 15px;
 
   outline: none;
   transition: 0.2s;
@@ -153,7 +155,7 @@ body {
 .checkbox-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 10px;
 
   margin-top: 10px;
   margin-bottom: 34px;
@@ -186,7 +188,7 @@ body {
 
 .submit-btn {
   width: 100%;
-  height: 68px;
+  height: 58px;
 
   border: none;
   border-radius: 22px;
@@ -207,46 +209,6 @@ body {
 .submit-btn:hover {
   background: #002c5d;
   transform: translateY(-2px);
-}
-
-/* =========================
-   NOTEBOOK (AJUSTE 30%)
-========================= */
-
-@media (max-width: 1440px) {
-  .cadastro-form {
-    max-width: 520px;
-    padding: 28px;
-    border-radius: 26px;
-  }
-
-  .cadastro-content {
-    padding: 24px;
-  }
-
-  .overlay h1 {
-    font-size: 34px;
-  }
-
-  .overlay p {
-    font-size: 16px;
-  }
-
-  .form-group input,
-  .form-group select {
-    height: 56px;
-    font-size: 15px;
-  }
-
-  .submit-btn {
-    height: 60px;
-    font-size: 17px;
-  }
-
-  .checkbox-grid label {
-    padding: 14px;
-    font-size: 14px;
-  }
 }
 
 /* =========================
