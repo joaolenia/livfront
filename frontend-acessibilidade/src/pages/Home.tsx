@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
-
 import './Home.css';
 
 import type { Lugar } from '../types/lugar';
@@ -9,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 import { Avaliar } from '../components/Avaliar';
 import { Avaliacoes } from '../components/Avaliacoes';
+import { useEffect, useMemo, useState } from 'react';
 
 export function Home() {
 
