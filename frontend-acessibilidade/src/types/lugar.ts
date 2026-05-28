@@ -16,4 +16,5 @@ export interface Lugar {
   temBanheiroAcessivel: boolean;
   temElevador: boolean;
   temPortaLarga: boolean;
+  categoria: string;
 }
