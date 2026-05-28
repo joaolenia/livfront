@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import './CadastroLugares.css';
 
 import type { Lugar } from '../types/lugar';
@@ -54,16 +53,12 @@ export function CadastroLugares({
 
     const novoLugar: Lugar = {
       id: Date.now(),
-
       nome,
-
       descricao,
-
       statusAcessibilidade,
 
       localizacao: {
         type: 'Point',
-
         coordinates: [
           Number(longitude),
           Number(latitude),
@@ -71,12 +66,10 @@ export function CadastroLugares({
       },
 
       temRampa,
-
       temBanheiroAcessivel,
-
       temElevador,
-
       temPortaLarga,
+      categoria: 'OUTROS',
     };
 
     onAdicionarLugar(novoLugar);
@@ -85,11 +78,7 @@ export function CadastroLugares({
     setDescricao('');
     setLatitude('');
     setLongitude('');
-
-    setStatusAcessibilidade(
-      'ACESSIVEL'
-    );
-
+    setStatusAcessibilidade('ACESSIVEL');
     setTemRampa(false);
     setTemBanheiroAcessivel(false);
     setTemElevador(false);
@@ -98,7 +87,11 @@ export function CadastroLugares({
 
   return (
     <div className="cad-container">
+
       <aside className="cad-sidebar">
+
+   
+
         <img
           src="/fundo.png"
           alt="Mapa"
@@ -112,48 +105,56 @@ export function CadastroLugares({
           </h1>
 
           <p className="cad-text">
-            Adicione locais
-            acessíveis ao mapa.
+            Adicione locais acessíveis ao mapa.
           </p>
+
         </div>
-        <Link to="/home">
-          <button className='voltar'>HOME</button>
-        </Link>
+
       </aside>
 
       <main className="cad-content">
+     <Link
+          to="/home"
+          className="cad-home-link"
+        >
+          <button className="voltar">
+            HOME
+          </button>
+        </Link>
         <form
           className="cad-form"
           onSubmit={handleSubmit}
         >
+
           <div className="cad-top">
+
             <h2>Novo Local</h2>
 
             <p>
               Preencha os dados do
               estabelecimento.
             </p>
+
           </div>
 
           <div className="cad-group">
-            <label>
-              Nome do local
-            </label>
+
+            <label>Nome do local</label>
 
             <input
               type="text"
               placeholder="Ex: Mercado Central"
               value={nome}
               onChange={(e) =>
-                setNome(
-                  e.target.value
-                )
+                setNome(e.target.value)
               }
               required
             />
+
           </div>
 
           <div className="cad-group">
+
             <label>Endereço</label>
 
             <input
@@ -167,10 +168,13 @@ export function CadastroLugares({
               }
               required
             />
+
           </div>
 
           <div className="cad-grid-2">
+
             <div className="cad-group">
+
               <label>Latitude</label>
 
               <input
@@ -185,9 +189,11 @@ export function CadastroLugares({
                 }
                 required
               />
+
             </div>
 
             <div className="cad-group">
+
               <label>Longitude</label>
 
               <input
@@ -202,13 +208,15 @@ export function CadastroLugares({
                 }
                 required
               />
+
             </div>
+
           </div>
 
           <div className="cad-group">
+
             <label>
-              Status de
-              acessibilidade
+              Status de acessibilidade
             </label>
 
             <select
@@ -217,29 +225,29 @@ export function CadastroLugares({
               }
               onChange={(e) =>
                 setStatusAcessibilidade(
-                  e.target.value as
-                  | 'ACESSIVEL'
-                  | 'PARCIALMENTE ACESSIVEL'
-                  | 'INACESSIVEL'
+                  e.target.value as any
                 )
               }
             >
+
               <option value="ACESSIVEL">
                 Acessível
               </option>
 
               <option value="PARCIALMENTE ACESSIVEL">
-                Parcialmente
-                acessível
+                Parcialmente acessível
               </option>
 
               <option value="INACESSIVEL">
                 Não acessível
               </option>
+
             </select>
+
           </div>
 
           <div className="cad-check-grid">
+
             <label className="cad-check">
               <input
                 type="checkbox"
@@ -250,7 +258,6 @@ export function CadastroLugares({
                   )
                 }
               />
-
               <span>Rampa</span>
             </label>
 
@@ -266,7 +273,6 @@ export function CadastroLugares({
                   )
                 }
               />
-
               <span>
                 Banheiro acessível
               </span>
@@ -282,7 +288,6 @@ export function CadastroLugares({
                   )
                 }
               />
-
               <span>Elevador</span>
             </label>
 
@@ -296,11 +301,9 @@ export function CadastroLugares({
                   )
                 }
               />
-
-              <span>
-                Porta larga
-              </span>
+              <span>Porta larga</span>
             </label>
+
           </div>
 
           <button
@@ -309,8 +312,11 @@ export function CadastroLugares({
           >
             + Cadastrar Lugar
           </button>
+
         </form>
+
       </main>
+
     </div>
   );
 }
