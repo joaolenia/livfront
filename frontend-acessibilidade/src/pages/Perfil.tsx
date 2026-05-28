@@ -19,7 +19,7 @@ export function Perfil() {
         useState('General Carneiro');
 
     return (
-        <div className="perfil-page">
+        <div className="per-perfil-page">
 
             <EditarPerfil
                 aberto={modalAberto}
@@ -38,23 +38,23 @@ export function Perfil() {
 
             {/* BANNER */}
 
-            <div className="perfil-banner">
+            <div className="per-perfil-banner">
 
-                <div className="perfil-banner-overlay">
+                <div className="per-perfil-banner-overlay">
 
                     {/* TOPO */}
 
-                    <div className="perfil-topbar">
+                    <div className="per-perfil-topbar">
 
                         <Link to="/home">
-                            <button className="perfil-back">
+                            <button className="per-perfil-back">
                                 ← Voltar
                             </button>
                         </Link>
 
 
                         <button
-                            className="perfil-edit"
+                            className="per-perfil-edit"
                             onClick={() =>
                                 setModalAberto(true)
                             }
@@ -66,28 +66,27 @@ export function Perfil() {
 
                     {/* USUÁRIO */}
 
-                    <div className="perfil-user">
+                    <div className="per-perfil-user">
 
-                        <div className="perfil-avatar-wrapper">
+                        <div className="per-perfil-avatar-wrapper">
 
                             <img
                                 src="https://i.pravatar.cc/300"
                                 alt="Perfil"
-                                className="perfil-avatar"
+                                className="per-perfil-avatar"
                             />
 
-                            <button className="perfil-camera">
+                            <button className="per-perfil-camera">
                                 📷
                             </button>
 
                         </div>
 
-                        <div className="perfil-user-info">
+                        <div className="per-perfil-user-info">
 
                             <h1>{nome}</h1>
 
                             <p>{email}</p>
-
 
                         </div>
 
@@ -99,43 +98,43 @@ export function Perfil() {
 
             {/* CONTEÚDO */}
 
-            <div className="perfil-content">
+            <div className="per-perfil-content">
 
                 {/* ESQUERDA */}
 
-                <div className="perfil-left">
+                <div className="per-perfil-left">
 
                     {/* INFORMAÇÕES */}
 
-                    <div className="perfil-card">
+                    <div className="per-perfil-card">
 
-                        <div className="perfil-card-header">
+                        <div className="per-perfil-card-header">
                             <h2>
                                 Informações pessoais
                             </h2>
                         </div>
 
-                        <div className="perfil-info-list">
+                        <div className="per-perfil-info-list">
 
-                            <div className="perfil-info-item">
+                            <div className="per-perfil-info-item">
                                 <span>Nome completo</span>
 
                                 <strong>{nome}</strong>
                             </div>
 
-                            <div className="perfil-info-item">
+                            <div className="per-perfil-info-item">
                                 <span>Email</span>
 
                                 <strong>{email}</strong>
                             </div>
 
-                            <div className="perfil-info-item">
+                            <div className="per-perfil-info-item">
                                 <span>Cidade</span>
 
                                 <strong>{cidade}</strong>
                             </div>
 
-                            <div className="perfil-info-item">
+                            <div className="per-perfil-info-item">
                                 <span>Membro desde</span>
 
                                 <strong>
@@ -149,15 +148,15 @@ export function Perfil() {
 
                     {/* CONFIGURAÇÕES */}
 
-                    <div className="perfil-card">
+                    <div className="per-perfil-card">
 
-                        <div className="perfil-card-header">
+                        <div className="per-perfil-card-header">
                             <h2>
                                 Configurações
                             </h2>
                         </div>
 
-                        <div className="perfil-settings">
+                        <div className="per-perfil-settings">
 
                             <button>
                                 🔔 Notificações
@@ -171,7 +170,7 @@ export function Perfil() {
                                 🌎 Idioma
                             </button>
 
-                            <button className="perfil-logout">
+                            <button className="per-perfil-logout">
                                 🚪 Sair da conta
                             </button>
 
@@ -183,13 +182,13 @@ export function Perfil() {
 
                 {/* DIREITA */}
 
-                <div className="perfil-right">
+                <div className="per-perfil-right">
 
                     {/* STATS */}
 
-                    <div className="perfil-stats">
+                    <div className="per-perfil-stats">
 
-                        <div className="perfil-stat-card">
+                        <div className="per-perfil-stat-card">
                             <h3>18</h3>
 
                             <p>
@@ -197,7 +196,7 @@ export function Perfil() {
                             </p>
                         </div>
 
-                        <div className="perfil-stat-card">
+                        <div className="per-perfil-stat-card">
                             <h3>42</h3>
 
                             <p>
@@ -205,7 +204,7 @@ export function Perfil() {
                             </p>
                         </div>
 
-                        <div className="perfil-stat-card">
+                        <div className="per-perfil-stat-card">
                             <h3>49,8%</h3>
 
                             <p>
@@ -217,19 +216,19 @@ export function Perfil() {
 
                     {/* LOCAIS */}
 
-                    <div className="perfil-card">
+                    <div className="per-perfil-card">
 
-                        <div className="perfil-card-header">
+                        <div className="per-perfil-card-header">
                             <h2>
                                 Últimos locais adicionados
                             </h2>
                         </div>
 
-                        <div className="perfil-locais">
+                        <div className="per-perfil-locais">
 
-                            <div className="perfil-local-item">
+                            <div className="per-perfil-local-item">
 
-                                <div className="perfil-local-status verde"></div>
+                                <div className="per-perfil-local-status per-verde"></div>
 
                                 <div>
 
@@ -245,9 +244,9 @@ export function Perfil() {
 
                             </div>
 
-                            <div className="perfil-local-item">
+                            <div className="per-perfil-local-item">
 
-                                <div className="perfil-local-status amarelo"></div>
+                                <div className="per-perfil-local-status per-amarelo"></div>
 
                                 <div>
 
@@ -263,9 +262,9 @@ export function Perfil() {
 
                             </div>
 
-                            <div className="perfil-local-item">
+                            <div className="per-perfil-local-item">
 
-                                <div className="perfil-local-status vermelho"></div>
+                                <div className="per-perfil-local-status per-vermelho"></div>
 
                                 <div>
 

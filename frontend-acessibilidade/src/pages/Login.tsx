@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 interface Props {
   onLogin: (email: string, senha: string) => void;
@@ -69,10 +70,12 @@ export function Login({ onLogin }: Props) {
             Entrar
           </button>
 
+<Link to="/usuarios" className="register-link">
           <div className="register-link">
             Não possui conta?
             <span> Criar conta</span>
           </div>
+        </Link>
 
         </form>
 

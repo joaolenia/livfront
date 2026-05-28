@@ -35,73 +35,43 @@ export function Home() {
   useEffect(() => {
 
     const dados: Lugar[] = [
-
       {
         id: 1,
         nome: 'Escola Elay',
-
-        descricao:
-          'R. Carlos Rotta, X - Gen. Carneiro',
-
-        statusAcessibilidade:
-          'ACESSIVEL',
-
+        descricao: 'R. Carlos Rotta, X - Gen. Carneiro',
+        statusAcessibilidade: 'ACESSIVEL',
         localizacao: {
           type: 'Point',
-          coordinates: [
-            -51.306651,
-            -26.426072
-          ],
+          coordinates: [-51.306651, -26.426072],
         },
-
         temRampa: true,
         temBanheiroAcessivel: true,
         temElevador: false,
         temPortaLarga: true,
       },
-
       {
         id: 2,
         nome: 'Mercearia Bom Jesus',
-
-        descricao:
-          'R. Dom Carlos Eduardo Savóia Bandeira de Mello, X - Gen. Carneiro',
-
-        statusAcessibilidade:
-          'PARCIALMENTE ACESSIVEL',
-
+        descricao: 'R. Dom Carlos Eduardo Savóia Bandeira de Mello, X - Gen. Carneiro',
+        statusAcessibilidade: 'PARCIALMENTE ACESSIVEL',
         localizacao: {
           type: 'Point',
-          coordinates: [
-            -51.30490685753136,
-            -26.425417544594616
-          ],
+          coordinates: [-51.30490685753136, -26.425417544594616],
         },
-
         temRampa: false,
         temBanheiroAcessivel: false,
         temElevador: false,
         temPortaLarga: true,
       },
-
       {
         id: 3,
         nome: 'Mercearia São Miguel',
-
-        descricao:
-          'Rua Tancredo Neves, X - Gen. Carneiro',
-
-        statusAcessibilidade:
-          'INACESSIVEL',
-
+        descricao: 'Rua Tancredo Neves, X - Gen. Carneiro',
+        statusAcessibilidade: 'INACESSIVEL',
         localizacao: {
           type: 'Point',
-          coordinates: [
-            -51.305645646717565,
-            -26.42419511158366
-          ],
+          coordinates: [-51.305645646717565, -26.42419511158366],
         },
-
         temRampa: false,
         temBanheiroAcessivel: false,
         temElevador: false,
@@ -116,7 +86,6 @@ export function Home() {
 
   const lugaresFiltrados =
     useMemo(() => {
-
       return lugares.filter(
         (lugar) =>
           lugar.nome
@@ -125,7 +94,6 @@ export function Home() {
               busca.toLowerCase()
             )
       );
-
     }, [lugares, busca]);
 
   return (
@@ -149,13 +117,11 @@ export function Home() {
       <aside className="sidebar">
 
         <div className="sidebar-top">
-
           <img
             src="/fundo.png"
             alt="Mapa acessível"
             className="top-image"
           />
-
         </div>
 
         <div className="sidebar-scroll">
@@ -165,7 +131,6 @@ export function Home() {
             <div className="info-box">
 
               <div className="info-header">
-
                 <div
                   className={`status-icon ${
                     lugarSelecionado.statusAcessibilidade ===
@@ -178,20 +143,11 @@ export function Home() {
                       : 'vermelho'
                   }`}
                 >
-
-                  <img
-                    src="/rodas.png"
-                    alt=""
-                  />
-
+                  <img src="/rodas.png" alt="" />
                 </div>
 
                 <div>
-
-                  <h2>
-                    {lugarSelecionado.nome}
-                  </h2>
-
+                  <h2>{lugarSelecionado.nome}</h2>
                   <span
                     className={`status-badge ${
                       lugarSelecionado.statusAcessibilidade ===
@@ -204,13 +160,9 @@ export function Home() {
                         : 'badge-vermelho'
                     }`}
                   >
-                    {
-                      lugarSelecionado.statusAcessibilidade
-                    }
+                    {lugarSelecionado.statusAcessibilidade}
                   </span>
-
                 </div>
-
               </div>
 
               <p className="endereco">
@@ -218,53 +170,36 @@ export function Home() {
               </p>
 
               <div className="recursos-info">
-
                 {lugarSelecionado.temRampa && (
-                  <div className="recurso-item">
-                    ✅ Rampa de acesso
-                  </div>
+                  <div className="recurso-item">✅ Rampa de acesso</div>
                 )}
-
                 {lugarSelecionado.temBanheiroAcessivel && (
-                  <div className="recurso-item">
-                    ✅ Banheiro acessível
-                  </div>
+                  <div className="recurso-item">✅ Banheiro acessível</div>
                 )}
-
                 {lugarSelecionado.temPortaLarga && (
-                  <div className="recurso-item">
-                    ✅ Porta larga
-                  </div>
+                  <div className="recurso-item">✅ Porta larga</div>
                 )}
-
                 {lugarSelecionado.temElevador && (
-                  <div className="recurso-item">
-                    ✅ Elevador
-                  </div>
+                  <div className="recurso-item">✅ Elevador</div>
                 )}
-
               </div>
 
               <div className="acoes-lugar">
-
                 <button
                   className="btn-avaliacoes"
-                  onClick={() =>
-                    setModalAvaliacoes(true)
-                  }
+                  onClick={() => setModalAvaliacoes(true)}
                 >
-                  ⭐ Ver avaliações
+                  <img src="/avaliacao.png" alt="" className="btn-icon" />
+                  Ver avaliações
                 </button>
 
                 <button
                   className="btn-avaliar"
-                  onClick={() =>
-                    setModalAvaliar(true)
-                  }
+                  onClick={() => setModalAvaliar(true)}
                 >
-                  ✍️ Avaliar local
+                  <img src="/avaliar.png" alt="" className="btn-icon" />
+                  Avaliar local
                 </button>
-
               </div>
 
             </div>
@@ -280,20 +215,13 @@ export function Home() {
         <div className="top-search">
 
           <div className="search-box">
-
             <span>🔍</span>
-
             <input
               type="text"
               placeholder="Buscar endereço ou comércio..."
               value={busca}
-              onChange={(e) =>
-                setBusca(
-                  e.target.value
-                )
-              }
+              onChange={(e) => setBusca(e.target.value)}
             />
-
           </div>
 
           <button className="filter-btn">
@@ -302,13 +230,15 @@ export function Home() {
 
           <Link to="/perfil">
             <button className="perfil-btn">
-              👤 Perfil
+              <img src="/perfil.png" alt="" className="btn-icon" />
+              Perfil
             </button>
           </Link>
 
           <Link to="/cadastro">
             <button className="cadastro-btn">
-              ➕ Cadastro
+              <img src="/cadastro.png" alt="" className="btn-icon" />
+              Cadastro
             </button>
           </Link>
 
@@ -316,9 +246,7 @@ export function Home() {
 
         <Mapa
           lugares={lugaresFiltrados}
-          onSelecionarLugar={
-            setLugarSelecionado
-          }
+          onSelecionarLugar={setLugarSelecionado}
         />
 
       </main>

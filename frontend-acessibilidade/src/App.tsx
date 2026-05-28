@@ -8,6 +8,7 @@ import { Home } from './pages/Home';
 import { Perfil } from './pages/Perfil';
 import { CadastroLugares } from './pages/CadastroLugares';
 import { Login } from './pages/Login';
+import { CadastroUsuarios } from './pages/CadastroUsuarios';
 
 function App() {
 
@@ -45,6 +46,10 @@ function App() {
       <Route
         path="/cadastro"
         element={<CadastroLugares />}
+      />
+      <Route
+        path="/usuarios"
+        element={<CadastroUsuarios />}
       />
 
     </Routes>

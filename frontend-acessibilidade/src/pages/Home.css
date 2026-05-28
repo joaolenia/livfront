@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-box-sizing: border-box;
 }
 
 body {
@@ -20,19 +20,11 @@ body {
 
 .sidebar {
   width: 25%;
-
-  background: linear-gradient(
-    180deg,
-    #003b7a,
-    #0b1f3a
-  );
-
+  background: linear-gradient(180deg, #003b7a, #0b1f3a);
   display: flex;
   flex-direction: column;
-
   position: relative;
   z-index: 999;
-
   overflow: hidden;
 }
 
@@ -44,34 +36,24 @@ body {
 .top-image {
   margin-top: 10px;
   margin-left: 2.7%;
-
   width: 100%;
   height: 310px;
-
   object-fit: cover;
-
   display: block;
-
   border-radius: 10%;
 }
 
 .sidebar-scroll {
   flex: 1;
-
   overflow-y: auto;
-
   width: 100%;
-
   padding: 14px;
 }
 
 .info-box {
   background: white;
-
   border-radius: 22px;
-
   padding: 16px;
-
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
@@ -84,9 +66,7 @@ body {
 .status-icon {
   width: 48px;
   height: 48px;
-
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,17 +76,9 @@ body {
   width: 24px;
 }
 
-.status-icon.verde {
-  background: #22c55e;
-}
-
-.status-icon.amarelo {
-  background: #facc15;
-}
-
-.status-icon.vermelho {
-  background: #ef4444;
-}
+.status-icon.verde { background: #22c55e; }
+.status-icon.amarelo { background: #facc15; }
+.status-icon.vermelho { background: #ef4444; }
 
 .info-header h2 {
   font-size: 17px;
@@ -114,43 +86,25 @@ body {
 
 .status-badge {
   display: inline-flex;
-
   padding: 5px 10px;
-
   border-radius: 999px;
-
   font-size: 10px;
   font-weight: 700;
 }
 
-.badge-verde {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.badge-amarelo {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.badge-vermelho {
-  background: #fee2e2;
-  color: #991b1b;
-}
+.badge-verde { background: #dcfce7; color: #166534; }
+.badge-amarelo { background: #fef3c7; color: #92400e; }
+.badge-vermelho { background: #fee2e2; color: #991b1b; }
 
 .endereco {
   margin-top: 14px;
-
   color: #64748b;
-
   line-height: 1.5;
-
   font-size: 13px;
 }
 
 .recursos-info {
   margin-top: 16px;
-
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -158,32 +112,40 @@ body {
 
 .recurso-item {
   background: #f8fafc;
-
   border: 1px solid #e2e8f0;
-
   border-radius: 14px;
-
   padding: 10px 12px;
 }
 
+/* BOTÕES COM ÍCONES */
+
 .acoes-lugar {
   margin-top: 18px;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .btn-avaliacoes,
-.btn-avaliar {
+.btn-avaliar,
+.perfil-btn,
+.cadastro-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   height: 46px;
-
   border: none;
   border-radius: 14px;
-
   cursor: pointer;
-
   font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 .btn-avaliacoes {
@@ -196,51 +158,38 @@ body {
   color: white;
 }
 
-/* MAPA */
+/* MAPA E BUSCA */
 
 .map-content {
   flex: 1;
   position: relative;
 }
 
-/* BUSCA */
-
 .top-search {
   position: absolute;
-
   top: 18px;
   left: 22px;
   right: 22px;
-
   z-index: 1000;
-
   display: flex;
   gap: 12px;
 }
 
 .search-box {
   flex: 1;
-
   height: 56px;
-
   background: white;
-
   border-radius: 18px;
-
   display: flex;
   align-items: center;
-
   padding: 0 18px;
-
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 .search-box input {
   flex: 1;
-
   border: none;
   outline: none;
-
   margin-left: 12px;
 }
 
@@ -248,35 +197,25 @@ body {
 .perfil-btn,
 .cadastro-btn {
   height: 56px;
-
   padding: 0 20px;
-
   border: none;
   border-radius: 18px;
-
   color: white;
-
   font-weight: 600;
-
   cursor: pointer;
 }
 
-.filter-btn {
-  background: #003b7a;
-}
+.filter-btn { background: #003b7a; }
+.perfil-btn { background: #0f172a; }
+.cadastro-btn { background: #22c55e; }
 
-.perfil-btn {
-  background: #0f172a;
-}
-
-.cadastro-btn {
-  background: #22c55e;
+/* AJUSTE ÍCONE BRANCO PARA BOTÕES ESCUROS */
+.perfil-btn .btn-icon,
+.cadastro-btn .btn-icon,
+.btn-avaliar .btn-icon {
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 1200px) {
-
-  .sidebar {
-    display: none;
-  }
-
+  .sidebar { display: none; }
 }
