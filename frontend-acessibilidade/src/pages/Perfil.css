@@ -2,27 +2,26 @@
   min-height: 100vh;
   background: #f1f5f9;
   font-family: Inter, sans-serif;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .per-perfil-page * {
   box-sizing: border-box;
-}
-
-.per-perfil-page {
   margin: 0;
   padding: 0;
 }
 
-/* BANNER */
+/* ===========================
+   BANNER
+=========================== */
 
 .per-perfil-banner {
-  height: 310px;
+  min-height: 340px;
 
   background:
     linear-gradient(
-      rgba(0, 28, 70, 0.78),
-      rgba(0, 28, 70, 0.78)
+      rgba(0, 28, 70, 0.82),
+      rgba(0, 28, 70, 0.82)
     ),
     url('/banner.png');
 
@@ -43,35 +42,38 @@
   justify-content: space-between;
 }
 
-/* TOPO */
+/* ===========================
+   TOPO
+=========================== */
 
 .per-perfil-topbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
 .per-perfil-back,
 .per-perfil-edit {
-  height: 46px;
-
-  padding: 0 22px;
+  min-height: 48px;
 
   border: none;
   border-radius: 16px;
+
+  padding: 0 22px;
 
   font-size: 14px;
   font-weight: 600;
 
   cursor: pointer;
 
-  backdrop-filter: blur(10px);
-
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .per-perfil-back {
-  background: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,.15);
   color: white;
+  backdrop-filter: blur(10px);
 }
 
 .per-perfil-edit {
@@ -84,7 +86,9 @@
   transform: translateY(-2px);
 }
 
-/* USER */
+/* ===========================
+   PERFIL
+=========================== */
 
 .per-perfil-user {
   display: flex;
@@ -92,7 +96,7 @@
   gap: 24px;
 
   position: relative;
-  top: -50px;
+  top: -40px;
 }
 
 .per-perfil-avatar-wrapper {
@@ -100,26 +104,25 @@
 }
 
 .per-perfil-avatar {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
 
   border-radius: 50%;
-
   object-fit: cover;
 
   border: 5px solid white;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 .per-perfil-camera {
   position: absolute;
 
-  right: 2px;
-  bottom: 11px;
+  right: 0;
+  bottom: 8px;
 
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
 
   border: none;
   border-radius: 50%;
@@ -131,36 +134,38 @@
 }
 
 .per-perfil-user-info h1 {
-  font-size: 42px;
+  font-size: clamp(2rem, 4vw, 3rem);
   color: white;
-  margin: 0;
 }
 
 .per-perfil-user-info p {
   color: #dbeafe;
-  margin-top: 6px;
-  font-size: 16px;
+  margin-top: 5px;
 }
 
-/* CONTENT */
+/* ===========================
+   CONTEÚDO
+=========================== */
 
 .per-perfil-content {
-  width: 100%;
-  max-width: 1350px;
+  max-width: 1400px;
 
-  margin: -70px auto 0 auto;
+  margin: -60px auto 0;
 
   padding: 0 30px 40px;
 
   display: grid;
   grid-template-columns: 340px 1fr;
+
   gap: 24px;
 
   position: relative;
   z-index: 5;
 }
 
-/* CARD */
+/* ===========================
+   CARDS
+=========================== */
 
 .per-perfil-card {
   background: white;
@@ -171,7 +176,7 @@
 
   border: 1px solid #e2e8f0;
 
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 10px 25px rgba(15,23,42,.05);
 
   margin-bottom: 24px;
 }
@@ -181,11 +186,13 @@
 }
 
 .per-perfil-card-header h2 {
-  font-size: 20px;
   color: #0f172a;
+  font-size: 20px;
 }
 
-/* INFO */
+/* ===========================
+   INFORMAÇÕES
+=========================== */
 
 .per-perfil-info-list {
   display: flex;
@@ -201,15 +208,16 @@
 .per-perfil-info-item span {
   color: #64748b;
   font-size: 13px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .per-perfil-info-item strong {
   color: #0f172a;
-  font-size: 15px;
 }
 
-/* SETTINGS */
+/* ===========================
+   CONFIGURAÇÕES
+=========================== */
 
 .per-perfil-settings {
   display: flex;
@@ -218,25 +226,23 @@
 }
 
 .per-perfil-settings button {
-  height: 52px;
+  height: 56px;
 
   border: none;
   border-radius: 16px;
 
   background: #f8fafc;
 
-  color: #334155;
-
-  font-size: 14px;
-  font-weight: 600;
+  padding: 0 18px;
 
   text-align: left;
 
-  padding: 0 18px;
-
   cursor: pointer;
 
-  transition: 0.2s;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: .3s;
 }
 
 .per-perfil-settings button:hover {
@@ -248,22 +254,28 @@
   color: #b91c1c !important;
 }
 
-/* STATS */
+/* ===========================
+   STATS
+=========================== */
 
 .per-perfil-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
   gap: 18px;
 
   margin-bottom: 24px;
 }
 
 .per-perfil-stat-card {
-  background: linear-gradient(
-    135deg,
-    #003b7a,
-    #0056b3
-  );
+  background:
+    linear-gradient(
+      135deg,
+      #003b7a,
+      #0056b3
+    );
 
   border-radius: 22px;
 
@@ -271,20 +283,26 @@
 
   color: white;
 
-  box-shadow: 0 10px 24px rgba(0, 59, 122, 0.2);
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .per-perfil-stat-card h3 {
-  font-size: 34px;
-  margin-bottom: 8px;
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
 .per-perfil-stat-card p {
   color: #dbeafe;
-  font-size: 14px;
+  line-height: 1.4;
 }
 
-/* LOCAIS */
+/* ===========================
+   LOCAIS
+=========================== */
 
 .per-perfil-locais {
   display: flex;
@@ -297,7 +315,7 @@
   align-items: center;
   gap: 14px;
 
-  padding: 16px;
+  padding: 18px;
 
   border-radius: 18px;
 
@@ -309,7 +327,6 @@
 .per-perfil-local-status {
   width: 14px;
   height: 14px;
-
   border-radius: 50%;
 }
 
@@ -326,64 +343,133 @@
 }
 
 .per-perfil-local-item h4 {
-  font-size: 15px;
   color: #0f172a;
   margin-bottom: 4px;
 }
 
 .per-perfil-local-item p {
   color: #64748b;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-/* RESPONSIVO */
+/* ===========================
+   TABLET
+=========================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+
   .per-perfil-content {
     grid-template-columns: 1fr;
   }
 
-  .per-perfil-stats {
-    grid-template-columns: 1fr;
+  .per-perfil-left {
+    order: 2;
   }
+
+  .per-perfil-right {
+    order: 1;
+  }
+
 }
 
+/* ===========================
+   MOBILE
+=========================== */
+
 @media (max-width: 768px) {
+
   .per-perfil-banner {
-    height: auto;
+    min-height: 480px;
   }
 
   .per-perfil-banner-overlay {
-    padding: 24px;
-    gap: 24px;
-  }
-
-  .per-perfil-user {
-    flex-direction: column;
-    align-items: flex-start;
-
-    margin-top: -30px;
-  }
-
-  .per-perfil-user-info h1 {
-    font-size: 32px;
-  }
-
-  .per-perfil-content {
-    margin-top: -10px;
-    padding: 0 16px 30px;
+    padding: 20px;
   }
 
   .per-perfil-topbar {
-    gap: 12px;
+    flex-direction: column;
   }
 
   .per-perfil-back,
   .per-perfil-edit {
-    flex: 1;
+    width: 100%;
   }
 
-  .per-perfil-edit:active {
-    transform: scale(0.98);
+  .per-perfil-user {
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    top: 0;
+
+    margin-top: 15px;
   }
+
+  .per-perfil-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .per-perfil-content {
+
+    margin-top: -30px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .per-perfil-card {
+    padding: 20px;
+  }
+
+  .per-perfil-stat-card {
+    min-height: 130px;
+  }
+
+  .per-perfil-stat-card h3 {
+    font-size: 30px;
+  }
+
+}
+
+/* ===========================
+   CELULARES PEQUENOS
+=========================== */
+
+@media (max-width: 480px) {
+
+  .per-perfil-banner {
+    min-height: 520px;
+  }
+
+  .per-perfil-avatar {
+    width: 95px;
+    height: 95px;
+  }
+
+  .per-perfil-user-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .per-perfil-user-info p {
+    font-size: 14px;
+  }
+
+  .per-perfil-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .per-perfil-stat-card {
+    padding: 20px;
+  }
+
+  .per-perfil-stat-card h3 {
+    font-size: 28px;
+  }
+
 }
