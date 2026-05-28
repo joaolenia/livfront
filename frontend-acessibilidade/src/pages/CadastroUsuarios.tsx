@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './CadastroUsuarios.css';
 
 interface Usuario {
@@ -19,6 +21,8 @@ interface Props {
 }
 
 export function CadastroUsuarios({ onCadastrarUsuario }: Props) {
+
+  const navigate = useNavigate();
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -93,16 +97,13 @@ export function CadastroUsuarios({ onCadastrarUsuario }: Props) {
 
   return (
     <div className="user-container">
-
-      {/* SIDEBAR PADRÃO DO PROJETO */}
-      <aside className="user-sidebar">
-        <div className="sidebar-overlay">
-          <h1>Cadastro de Usuário</h1>
-          <p>Crie sua conta para acessar a plataforma.</p>
-        </div>
-
-        <button className="btn-home">HOME</button>
-      </aside>
+ 
+    <button
+  className="btn-home"
+  onClick={() => navigate('/home')}
+>
+  HOME
+</button>
 
       {/* CONTEÚDO */}
       <main className="user-content">

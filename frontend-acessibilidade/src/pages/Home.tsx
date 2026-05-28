@@ -7,7 +7,12 @@ import { Link } from 'react-router-dom';
 
 import { Avaliar } from '../components/Avaliar';
 import { Avaliacoes } from '../components/Avaliacoes';
-import { useEffect, useMemo, useState } from 'react';
+
+import {
+  useEffect,
+  useMemo,
+  useState
+} from 'react';
 
 export function Home() {
 
@@ -32,51 +37,70 @@ export function Home() {
     setModalAvaliacoes
   ] = useState(false);
 
+  const [categoriaFiltro, setCategoriaFiltro] =
+    useState('TODOS');
+
+  const [textoFiltro, setTextoFiltro] =
+    useState('☰ Filtros');
+
   useEffect(() => {
 
     const dados: Lugar[] = [
+
       {
         id: 1,
         nome: 'Escola Elay',
         descricao: 'R. Carlos Rotta, X - Gen. Carneiro',
         statusAcessibilidade: 'ACESSIVEL',
+        categoria: 'ESCOLA',
+
         localizacao: {
           type: 'Point',
           coordinates: [-51.306651, -26.426072],
         },
+
         temRampa: true,
         temBanheiroAcessivel: true,
         temElevador: false,
         temPortaLarga: true,
       },
+
       {
         id: 2,
         nome: 'Mercearia Bom Jesus',
         descricao: 'R. Dom Carlos Eduardo Savóia Bandeira de Mello, X - Gen. Carneiro',
         statusAcessibilidade: 'PARCIALMENTE ACESSIVEL',
+        categoria: 'MERCADO',
+
         localizacao: {
           type: 'Point',
           coordinates: [-51.30490685753136, -26.425417544594616],
         },
+
         temRampa: false,
         temBanheiroAcessivel: false,
         temElevador: false,
         temPortaLarga: true,
       },
+
       {
         id: 3,
-        nome: 'Mercearia São Miguel',
+        nome: 'Farmácia São Miguel',
         descricao: 'Rua Tancredo Neves, X - Gen. Carneiro',
         statusAcessibilidade: 'INACESSIVEL',
+        categoria: 'FARMACIA',
+
         localizacao: {
           type: 'Point',
           coordinates: [-51.305645646717565, -26.42419511158366],
         },
+
         temRampa: false,
         temBanheiroAcessivel: false,
         temElevador: false,
         temPortaLarga: false,
       },
+
     ];
 
     setLugares(dados);
@@ -86,15 +110,30 @@ export function Home() {
 
   const lugaresFiltrados =
     useMemo(() => {
-      return lugares.filter(
-        (lugar) =>
+
+      return lugares.filter((lugar) => {
+
+        const buscaMatch =
           lugar.nome
             .toLowerCase()
             .includes(
               busca.toLowerCase()
-            )
-      );
-    }, [lugares, busca]);
+            );
+
+        const categoriaMatch =
+          categoriaFiltro === 'TODOS'
+            ? true
+            : lugar.categoria === categoriaFiltro;
+
+        return buscaMatch && categoriaMatch;
+
+      });
+
+    }, [
+      lugares,
+      busca,
+      categoriaFiltro
+    ]);
 
   return (
 
@@ -114,14 +153,18 @@ export function Home() {
         }
       />
 
+      {/* SIDEBAR */}
+
       <aside className="sidebar">
 
         <div className="sidebar-top">
+
           <img
             src="/fundo.png"
             alt="Mapa acessível"
             className="top-image"
           />
+
         </div>
 
         <div className="sidebar-scroll">
@@ -131,6 +174,7 @@ export function Home() {
             <div className="info-box">
 
               <div className="info-header">
+
                 <div
                   className={`status-icon ${
                     lugarSelecionado.statusAcessibilidade ===
@@ -143,11 +187,20 @@ export function Home() {
                       : 'vermelho'
                   }`}
                 >
-                  <img src="/rodas.png" alt="" />
+
+                  <img
+                    src="/rodas.png"
+                    alt=""
+                  />
+
                 </div>
 
                 <div>
-                  <h2>{lugarSelecionado.nome}</h2>
+
+                  <h2>
+                    {lugarSelecionado.nome}
+                  </h2>
+
                   <span
                     className={`status-badge ${
                       lugarSelecionado.statusAcessibilidade ===
@@ -162,7 +215,9 @@ export function Home() {
                   >
                     {lugarSelecionado.statusAcessibilidade}
                   </span>
+
                 </div>
+
               </div>
 
               <p className="endereco">
@@ -170,36 +225,69 @@ export function Home() {
               </p>
 
               <div className="recursos-info">
+
                 {lugarSelecionado.temRampa && (
-                  <div className="recurso-item">✅ Rampa de acesso</div>
+                  <div className="recurso-item">
+                    ✅ Rampa de acesso
+                  </div>
                 )}
+
                 {lugarSelecionado.temBanheiroAcessivel && (
-                  <div className="recurso-item">✅ Banheiro acessível</div>
+                  <div className="recurso-item">
+                    ✅ Banheiro acessível
+                  </div>
                 )}
+
                 {lugarSelecionado.temPortaLarga && (
-                  <div className="recurso-item">✅ Porta larga</div>
+                  <div className="recurso-item">
+                    ✅ Porta larga
+                  </div>
                 )}
+
                 {lugarSelecionado.temElevador && (
-                  <div className="recurso-item">✅ Elevador</div>
+                  <div className="recurso-item">
+                    ✅ Elevador
+                  </div>
                 )}
+
               </div>
 
               <div className="acoes-lugar">
+
                 <button
                   className="btn-avaliacoes"
-                  onClick={() => setModalAvaliacoes(true)}
+                  onClick={() =>
+                    setModalAvaliacoes(true)
+                  }
                 >
-                  <img src="/avaliacao.png" alt="" className="btn-icon" />
+
+                  <img
+                    src="/avaliacao.png"
+                    alt=""
+                    className="btn-icon"
+                  />
+
                   Ver avaliações
+
                 </button>
 
                 <button
                   className="btn-avaliar"
-                  onClick={() => setModalAvaliar(true)}
+                  onClick={() =>
+                    setModalAvaliar(true)
+                  }
                 >
-                  <img src="/avaliar.png" alt="" className="btn-icon" />
+
+                  <img
+                    src="/avaliar.png"
+                    alt=""
+                    className="btn-icon"
+                  />
+
                   Avaliar local
+
                 </button>
+
               </div>
 
             </div>
@@ -210,43 +298,131 @@ export function Home() {
 
       </aside>
 
+      {/* MAPA */}
+
       <main className="map-content">
 
         <div className="top-search">
 
+          {/* BUSCA */}
+
           <div className="search-box">
+
             <span>🔍</span>
+
             <input
               type="text"
               placeholder="Buscar endereço ou comércio..."
               value={busca}
-              onChange={(e) => setBusca(e.target.value)}
+              onChange={(e) =>
+                setBusca(e.target.value)
+              }
             />
+
           </div>
 
-          <button className="filter-btn">
-            ☰ Filtros
-          </button>
+          {/* FILTROS */}
+
+          <div className="filter-container">
+
+            <button className="filter-btn">
+              {textoFiltro}
+            </button>
+
+            <div className="filter-menu">
+
+              <button
+                onClick={() => {
+                  setCategoriaFiltro('TODOS');
+                  setTextoFiltro('☰ Filtros');
+                }}
+              >
+                🌎 Todos
+              </button>
+
+              <button
+                onClick={() => {
+                  setCategoriaFiltro('FARMACIA');
+                  setTextoFiltro('🏥 Farmácias');
+                }}
+              >
+                🏥 Farmácias
+              </button>
+
+              <button
+                onClick={() => {
+                  setCategoriaFiltro('MERCADO');
+                  setTextoFiltro('🛒 Mercados');
+                }}
+              >
+                🛒 Mercados
+              </button>
+
+              <button
+                onClick={() => {
+                  setCategoriaFiltro('LOJA');
+                  setTextoFiltro('🛍️ Lojas');
+                }}
+              >
+                🛍️ Lojas
+              </button>
+
+              <button
+                onClick={() => {
+                  setCategoriaFiltro('ESCOLA');
+                  setTextoFiltro('🏫 Escolas');
+                }}
+              >
+                🏫 Escolas
+              </button>
+
+            </div>
+
+          </div>
+
+          {/* PERFIL */}
 
           <Link to="/perfil">
+
             <button className="perfil-btn">
-              <img src="/perfil.png" alt="" className="btn-icon" />
+
+              <img
+                src="/perfil.png"
+                alt=""
+                className="btn-icon"
+              />
+
               Perfil
+
             </button>
+
           </Link>
 
+          {/* CADASTRO */}
+
           <Link to="/cadastro">
+
             <button className="cadastro-btn">
-              <img src="/cadastro.png" alt="" className="btn-icon" />
+
+              <img
+                src="/cadastro.png"
+                alt=""
+                className="btn-icon"
+              />
+
               Cadastro
+
             </button>
+
           </Link>
 
         </div>
 
         <Mapa
           lugares={lugaresFiltrados}
-          onSelecionarLugar={setLugarSelecionado}
+          onSelecionarLugar={
+            setLugarSelecionado
+          }
         />
 
       </main>
