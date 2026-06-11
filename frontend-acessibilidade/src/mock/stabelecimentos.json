@@ -1,0 +1,977 @@
+[
+  {
+    "id": 1,
+    "nome": "ESCOLA ELAY",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "ESCOLA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.306651, -26.426072]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 2,
+    "nome": "COMÉRCIO DE PEÇAS MABE",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+    "categoria": "LOJA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.30595050181997, -26.424325200966045]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": false,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 3,
+    "nome": "SEBBEN BEM VIVER",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "COMERCIO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.306546041677315, -26.424730573443192]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 4,
+    "nome": "AUTO ELÉTRICA GENERAL",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+    "categoria": "OFICINA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.306667616424185, -26.425021551123248]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": false,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 5,
+    "nome": "SUPERMERCADO SÃO MIGUEL",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "MERCADO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31310779634139, -26.424606356598634]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 6,
+    "nome": "COOPERATIVA SICOOB",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "BANCO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31356305266816, -26.42596950204221]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 7,
+    "nome": "COOPERATIVA SICREDI",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "BANCO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31371872028653, -26.425830788643697]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 8,
+    "nome": "GUSTAVO VEÍCULOS",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "LOJA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.313196940281024, -26.423862972816337]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 9,
+    "nome": "CLAGIL",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "EMPRESA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31389184870873, -26.424492325009243]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 10,
+    "nome": "VEM QUE TEM",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "LOJA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.313862881768195, -26.42477210198195]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 11,
+    "nome": "SALA DO EMPREENDEDOR",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "ORGAO_PUBLICO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31245131438617, -26.425279021623886]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 12,
+    "nome": "DETRAN",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "ORGAO_PUBLICO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31239767020462, -26.425178139271313]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 13,
+    "nome": "FARMÁCIA FARMASUL",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "FARMACIA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31435335669736, -26.424303964367912]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 14,
+    "nome": "PADARIA ZÉ COLMEIA",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "INACESSIVEL",
+    "categoria": "PADARIA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31444562701991, -26.42387749801379]
+    },
+    "temRampa": false,
+    "temBanheiroAcessivel": false,
+    "temElevador": false,
+    "temPortaLarga": false
+  },
+  {
+    "id": 15,
+    "nome": "MAGAZINE LUIZA",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "LOJA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31440493310879, -26.424227165316385]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 16,
+    "nome": "CÂMARA MUNICIPAL",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "ORGAO_PUBLICO",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.3120837001522, -26.425676026294507]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 17,
+    "nome": "FARMÁCIA UNIFARMA",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "FARMACIA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.314076422009215, -26.424644204297092]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+    "id": 18,
+    "nome": "GALMAQ",
+    "descricao": "General Carneiro - PR",
+    "statusAcessibilidade": "ACESSIVEL",
+    "categoria": "EMPRESA",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [-51.31534670060741, -26.426740734756702]
+    },
+    "temRampa": true,
+    "temBanheiroAcessivel": true,
+    "temElevador": false,
+    "temPortaLarga": true
+  },
+  {
+  "id": 19,
+  "nome": "CARTEL BEER",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "BAR",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.315579074891296, -26.426868138034134]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 20,
+  "nome": "LOJA ART MANIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31581144917412, -26.42696652157957]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 21,
+  "nome": "LEVE TINTAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.316178740257904, -26.42708494505753]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 22,
+  "nome": "BALBINOTTI MÓVEIS ELETROS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.316367749319795, -26.427074665266844]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 23,
+  "nome": "POSTO MAXSUL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "POSTO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.316166391763005, -26.427423287133607]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 24,
+  "nome": "KAPA ACESSÓRIOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31446855345554, -26.42610883161943]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 25,
+  "nome": "ELETROMÓVEIS TOMACHESKI",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31417481532526, -26.425689619025622]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 26,
+  "nome": "LOJA D´ ELAINE",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31415402820633, -26.425556911146064]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 27,
+  "nome": "PONTO BOM PRESENTES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31413257053406, -26.425494460327663]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 28,
+  "nome": "A LEGÍTIMA SUPER 10",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31394950976911, -26.425522683296272]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 29,
+  "nome": "JS LOJÃO DA ECONOMIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.313915982156146, -26.425317916480108]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 30,
+  "nome": "BOM PREÇO VEÍCULOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.313811836707785, -26.425192928299534]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 31,
+  "nome": "FOTO SANDI",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31375828810871, -26.423944166445136]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 32,
+  "nome": "ECONÔMICA CENTER FASHION",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31399029918767, -26.424015625553576]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 33,
+  "nome": "ACADEMIA LEVEL UP",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "ACADEMIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.313954759918474, -26.42428284619218]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 34,
+  "nome": "ACADEMIA VIDA E SAÚDE",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "ACADEMIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31065989888893, -26.42319509342014]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 35,
+  "nome": "MERCADO ESQUINÃO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "MERCADO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.308983187004706, -26.42219354292532]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 36,
+  "nome": "APAE",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "INSTITUICAO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.309846343071335, -26.42414354198609]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 37,
+  "nome": "GINÁSIO MUNICIPAL CLACIL GIROTTO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "ESPORTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3100210696915, -26.42360353928238]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 38,
+  "nome": "ARENA SPORT BEACH",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "ESPORTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.312074829906585, -26.42447277815902]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 39,
+  "nome": "FARMÁCIA RODOCENTRO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "FARMACIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31105409460523, -26.423355181139353]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 40,
+  "nome": "LOJAS MM",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.313954759918474, -26.42428284619218]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 41,
+  "nome": "SCOOBY DOO LANCHES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "LANCHONETE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31411781793335, -26.42536548069633]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 42,
+  "nome": "LOJA LUMA MODAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31399968505512, -26.424775540372092]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 43,
+  "nome": "POSTO SHELL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "POSTO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.308624949399395, -26.425147278211355]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 44,
+  "nome": "LOJA AGROPECUÁRIA CAMISC",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "AGROPECUARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30890121692677, -26.42530580762607]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 45,
+  "nome": "IMPÉRIO CASA DE CARNES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "ACOUGUE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31505090266698, -26.426533137609717]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 46,
+  "nome": "MECANICA ALFA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "OFICINA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30700468705414, -26.425221091198875]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 47,
+  "nome": "NEOVIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "EMPRESA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30798322816161, -26.4259123870172]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 48,
+  "nome": "AUTO ELETRICA MP",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "OFICINA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30780300999799, -26.425783848410532]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 49,
+  "nome": "MERCEARIA SÃO MIGUEL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "MERCADO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.305645646717565, -26.42419511158366]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 50,
+  "nome": "BOTECO DO MARRETA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "BAR",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30423780612797, -26.423355818528606]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 51,
+  "nome": "POSTO MARINHO LIDER",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "POSTO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.303517942226556, -26.422973052434635]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 52,
+  "nome": "RESTAURANTE MARGARIDA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30257479341217, -26.422223422793063]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 53,
+  "nome": "MADEREIRA RAMPON",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "MADEIREIRA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3027628094611, -26.424462029874068]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 54,
+  "nome": "GINASIO DE ESPORTE BAIRRO SÃO MIGUEL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "ESPORTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30405191712008, -26.425646681159378]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 55,
+  "nome": "MERCEARIA BOM JESUS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "MERCADO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30490685753136, -26.425417544594616]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 56,
+  "nome": "ULTRAGAZ",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "EMPRESA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30512773874548, -26.424760028382536]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 57,
+  "nome": "TWARDOWSKI CONSTRUÇÕES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "CONSTRUCAO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30430329866844, -26.424388735472707]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 58,
+  "nome": "AUTO ELETRICA FAISCA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "OFICINA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30245795574222, -26.422100618656337]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 59,
+  "nome": "GALEGO SOCORRO 24 HORAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "AUTO_SOCORRO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.301464842270924, -26.424857515785174]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 60,
+  "nome": "RETOCAR AUTO SOCORRO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "AUTO_SOCORRO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [0, 0]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 61,
+  "nome": "MONJOLO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "categoria": "EMPRESA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31128511457868, -26.428072655202808]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 62,
+  "nome": "SUCATAKI AUTO PEÇAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "AUTO_PECAS",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31277615812679, -26.429381401281127]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 63,
+  "nome": "CAPELA MORTUARIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SERVICO_PUBLICO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31283858714989, -26.429857751590138]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 64,
+  "nome": "CEMITERIO MUNICIPAL SÃO MIGUEL ARCANJO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "CEMITERIO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.312487719931944, -26.429974860409345]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 65,
+  "nome": "IGREJA UCRANIANA SÃO MIGUEL ARCANJO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "IGREJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31370937579079, -26.43022907182696]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+}
+]
