@@ -372,104 +372,153 @@
 
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+/* TABLET */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
-  .per-perfil-banner {
-    min-height: 480px;
+  .sidebar {
+    width: 320px;
   }
 
-  .per-perfil-banner-overlay {
-    padding: 20px;
-  }
-
-  .per-perfil-topbar {
-    flex-direction: column;
-  }
-
-  .per-perfil-back,
-  .per-perfil-edit {
-    width: 100%;
-  }
-
-  .per-perfil-user {
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    top: 0;
-
-    margin-top: 15px;
-  }
-
-  .per-perfil-avatar {
-    width: 110px;
-    height: 110px;
-  }
-
-  .per-perfil-content {
-
-    margin-top: -30px;
-
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .per-perfil-card {
-    padding: 20px;
-  }
-
-  .per-perfil-stat-card {
-    min-height: 130px;
-  }
-
-  .per-perfil-stat-card h3 {
-    font-size: 30px;
+  .top-search {
+    flex-wrap: wrap;
   }
 
 }
 
-/* ===========================
-   CELULARES PEQUENOS
-=========================== */
+/* MOBILE */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
-  .per-perfil-banner {
-    min-height: 520px;
+  .home-container {
+    flex-direction: column;
   }
 
-  .per-perfil-avatar {
-    width: 95px;
-    height: 95px;
+  .sidebar {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40vh;
+
+    border-radius: 25px 25px 0 0;
+
+    z-index: 2000;
+
+    background: white;
+
+    transform: translateY(0);
+
+    box-shadow:
+      0 -10px 30px rgba(0,0,0,.2);
   }
 
-  .per-perfil-user-info h1 {
-    font-size: 1.7rem;
+  .sidebar-top {
+    display: none;
   }
 
-  .per-perfil-user-info p {
+  .sidebar-scroll {
+    padding: 15px;
+  }
+
+  .info-box {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .map-content {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .top-search {
+
+    top: 10px;
+    left: 10px;
+    right: 10px;
+
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .search-box {
+    width: 100%;
+    height: 50px;
+  }
+
+  .search-box input {
     font-size: 14px;
   }
 
-  .per-perfil-card {
-    padding: 18px;
-    border-radius: 18px;
+  .filter-container {
+    flex: 1;
   }
 
-  .per-perfil-stat-card {
-    padding: 20px;
+  .filter-btn {
+    width: 100%;
+    min-width: auto;
+    height: 48px;
   }
 
-  .per-perfil-stat-card h3 {
-    font-size: 28px;
+  .perfil-btn,
+  .cadastro-btn {
+    flex: 1;
+    height: 48px;
+  }
+
+  .acoes-lugar {
+    margin-top: 15px;
+  }
+
+  .btn-avaliacoes,
+  .btn-avaliar {
+    height: 50px;
+  }
+
+  .info-header h2 {
+    font-size: 16px;
+  }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+  .sidebar {
+    height: 45vh;
+  }
+
+  .top-search {
+    gap: 6px;
+  }
+
+  .perfil-btn,
+  .cadastro-btn,
+  .filter-btn {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .info-header {
+    align-items: flex-start;
+  }
+
+  .status-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .status-icon img {
+    width: 20px;
+    height: 20px;
   }
 
 }

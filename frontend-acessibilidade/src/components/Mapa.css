@@ -214,3 +214,82 @@
 .vermelho {
   background: #ef4444;
 }
+/* TABLET */
+
+@media (max-width: 768px) {
+
+  .leaflet-control-zoom {
+
+    margin-right: 10px !important;
+    margin-bottom: 140px !important;
+
+  }
+
+  .bottom-legenda {
+
+    bottom: 46vh;
+
+    width: calc(100% - 20px);
+
+    gap: 10px;
+
+    padding: 12px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .legenda-mini {
+    font-size: 12px;
+  }
+
+  .marker-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .marker-wrapper img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .popup-card {
+    width: 200px;
+  }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+
+  .bottom-legenda {
+
+    width: calc(100% - 12px);
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-radius: 16px;
+
+    bottom: 47vh;
+  }
+
+  .legenda-mini {
+    font-size: 11px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .leaflet-control-zoom a {
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+
+}
