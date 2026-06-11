@@ -1,281 +1,332 @@
-.cad-container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  background: #f1f5f9;
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
   font-family: Inter, sans-serif;
+  background:#f1f5f9;
 }
 
-/* SIDEBAR */
+/* =========================
+   LAYOUT
+========================= */
 
-.cad-sidebar {
-  position: relative;
-  overflow: hidden;
-  width: 430px;
-  background: linear-gradient(180deg,
-      #003b7a,
-      #0b1f3a);
+.cad-container{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:380px 1fr;
 }
 
-.cad-image {
-  margin-top: 10px;
-  margin-left: 2.7%;
-  border-radius: 10%;
-  width: 400px;
-  height: 300px;
-  object-fit: cover;
-  opacity: 0.80;
+.cad-sidebar{
+  background:linear-gradient(
+    180deg,
+    #003b7a,
+    #0b1f3a
+  );
+
+  padding:30px 20px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
-.cad-overlay {
-  position: absolute;
-  inset: 0;
+.cad-image{
+  width:100%;
+  max-width:320px;
+  height:220px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  object-fit:cover;
+  border-radius:20px;
 
-  padding: 32px;
-
-  color: white;
+  margin-bottom:25px;
 }
 
-.cad-badge {
-  width: fit-content;
-
-  padding: 7px 14px;
-
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.1);
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  font-size: 12px;
-  font-weight: 600;
-
-  margin-bottom: 18px;
+.cad-overlay{
+  text-align:center;
+  color:#fff;
 }
 
-.cad-title {
-  font-size: 36px;
-  line-height: 1.1;
-  margin-bottom: 12px;
+.cad-title{
+  font-size:2rem;
+  margin-bottom:10px;
 }
 
-.cad-text {
-  font-size: 15px;
-  color: #dbeafe;
-  line-height: 1.5;
-}
-button.voltar {
-  margin-top: 70%;
-  margin-left: 5%;
-  width: 45%;
-  padding: 15px 20px;
-  border-radius: 14px;
-  background: #2563eb;
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+.cad-text{
+  color:#dbeafe;
 }
 
-/* CONTENT */
+/* =========================
+   CONTEÚDO
+========================= */
 
-.cad-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 32px;
+.cad-content{
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* FORM */
+/* =========================
+   HOME
+========================= */
 
-.cad-form {
-  width: 100%;
-  max-width: 620px;
+.cad-home-link{
+  width:100%;
+  max-width:700px;
 
-  background: white;
+  display:flex;
+  justify-content:flex-end;
 
-  border-radius: 24px;
+  margin-bottom:15px;
 
-  padding: 28px;
-
-  border: 1px solid #e2e8f0;
-
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  text-decoration:none;
 }
 
-.cad-top {
-  margin-bottom: 22px;
+.voltar{
+  width:140px;
+  height:48px;
+
+  border:none;
+  border-radius:12px;
+
+  background:#2563eb;
+  color:#fff;
+
+  font-weight:700;
+  cursor:pointer;
 }
 
-.cad-top h2 {
-  font-size: 26px;
-  margin-bottom: 4px;
-  color: #0f172a;
+.voltar:hover{
+  background:#1d4ed8;
 }
 
-.cad-top p {
-  font-size: 14px;
-  color: #64748b;
+/* =========================
+   FORM
+========================= */
+
+.cad-form{
+  width:100%;
+  max-width:700px;
+
+  background:#fff;
+
+  border-radius:20px;
+  padding:30px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
 }
 
-/* INPUTS */
-
-.cad-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
+.cad-top{
+  margin-bottom:25px;
 }
 
-.cad-group label {
-  font-size: 14px;
-  font-weight: 600;
+.cad-top h2{
+  font-size:28px;
+  color:#0f172a;
+  margin-bottom:5px;
+}
 
-  margin-bottom: 7px;
+.cad-top p{
+  color:#64748b;
+}
 
-  color: #334155;
+/* =========================
+   CAMPOS
+========================= */
+
+.cad-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:16px;
+}
+
+.cad-group label{
+  margin-bottom:8px;
+  font-weight:600;
+  color:#334155;
 }
 
 .cad-group input,
-.cad-group select {
-  height: 46px;
+.cad-group select{
+  width:100%;
+  height:50px;
 
-  border: 1px solid #dbe2ea;
+  border:1px solid #dbe2ea;
+  border-radius:12px;
 
-  border-radius: 14px;
-
-  padding: 0 14px;
-
-  font-size: 14px;
-
-  background: #fff;
-
-  transition: 0.2s;
+  padding:0 14px;
+  font-size:14px;
 }
 
 .cad-group input:focus,
-.cad-group select:focus {
-  outline: none;
-
-  border-color: #2563eb;
-
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+.cad-group select:focus{
+  outline:none;
+  border-color:#2563eb;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 
-.cad-grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.cad-grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
 }
 
-/* CHECKBOX */
+/* =========================
+   CHECKBOX
+========================= */
 
-.cad-check-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.cad-check-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 
-  margin-top: 10px;
-  margin-bottom: 24px;
+  margin:20px 0;
 }
 
-.cad-check {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.cad-check{
+  display:flex;
+  align-items:center;
+  gap:10px;
 
-  padding: 14px;
+  padding:12px;
 
-  border-radius: 14px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
 
-  background: #f8fafc;
-
-  border: 1px solid #e2e8f0;
-
-  cursor: pointer;
-
-  transition: 0.2s;
+  background:#f8fafc;
 }
 
-.cad-check:hover {
-  background: #eff6ff;
-  border-color: #93c5fd;
+.cad-check input{
+  width:18px;
+  height:18px;
 }
 
-.cad-check span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #334155;
+.cad-check span{
+  font-size:14px;
+  font-weight:600;
 }
 
-.cad-check input {
-  width: 18px;
-  height: 18px;
+/* =========================
+   BOTÃO
+========================= */
+
+.cad-button{
+  width:100%;
+  height:54px;
+
+  border:none;
+  border-radius:12px;
+
+  background:linear-gradient(
+    90deg,
+    #003b7a,
+    #0056b3
+  );
+
+  color:#fff;
+  font-size:15px;
+  font-weight:700;
+
+  cursor:pointer;
 }
 
-/* BUTTON */
+/* =========================
+   TABLET
+========================= */
 
-.cad-button {
-  width: 100%;
-  height: 50px;
+@media(max-width:900px){
 
-  border: none;
-  border-radius: 14px;
-
-  background: linear-gradient(90deg,
-      #003b7a,
-      #0056b3);
-
-  color: white;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.cad-button:hover {
-  transform: translateY(-2px);
-
-  box-shadow: 0 10px 20px rgba(0, 59, 122, 0.2);
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 900px) {
-  .cad-container {
-    grid-template-columns: 1fr;
+  .cad-container{
+    grid-template-columns:1fr;
   }
 
-  .cad-sidebar {
-    height: 220px;
+  .cad-sidebar{
+    padding:30px 20px;
+  }
+
+  .cad-image{
+    max-width:260px;
+    height:180px;
   }
 }
 
-@media (max-width: 768px) {
-  .cad-content {
-    padding: 16px;
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .cad-content{
+    padding:15px;
   }
 
-  .cad-form {
-    padding: 22px;
+  .cad-form{
+    padding:20px;
   }
 
-  .cad-grid-2,
-  .cad-check-grid {
-    grid-template-columns: 1fr;
+  .cad-grid-2{
+    grid-template-columns:1fr;
   }
 
-  .cad-title {
-    font-size: 28px;
+  .cad-check-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cad-home-link{
+    justify-content:center;
+  }
+
+  .voltar{
+    width:100%;
+    max-width:250px;
+  }
+
+  .cad-title{
+    font-size:1.7rem;
+  }
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media(max-width:480px){
+
+  .cad-content{
+    padding:10px;
+  }
+
+  .cad-form{
+    padding:15px;
+    border-radius:15px;
+  }
+
+  .cad-top h2{
+    font-size:22px;
+  }
+
+  .cad-title{
+    font-size:1.4rem;
+  }
+
+  .cad-group input,
+  .cad-group select{
+    height:48px;
+  }
+
+  .cad-button{
+    height:50px;
   }
 }
