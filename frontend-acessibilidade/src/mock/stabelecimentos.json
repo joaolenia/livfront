@@ -888,14 +888,14 @@
   "id": 60,
   "nome": "RETOCAR AUTO SOCORRO",
   "descricao": "General Carneiro - PR",
-  "statusAcessibilidade": "PARCIALMENTE ACESSIVEL",
+  "statusAcessibilidade": "ACESSIVEL",
   "categoria": "AUTO_SOCORRO",
   "localizacao": {
     "type": "Point",
-    "coordinates": [0, 0]
+    "coordinates": [-51.30255897333535, -26.422888741928144]
   },
   "temRampa": true,
-  "temBanheiroAcessivel": false,
+  "temBanheiroAcessivel": true,
   "temElevador": false,
   "temPortaLarga": true
 },
@@ -968,6 +968,829 @@
   "localizacao": {
     "type": "Point",
     "coordinates": [-51.31370937579079, -26.43022907182696]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 66,
+  "nome": "PANIFICADORA ZÉ COMEIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "PADARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31398978723803, -26.423815085871308]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 67,
+  "nome": "CASA DAS FLORES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "FLORICULTURA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31400273333594, -26.42381215000264]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 68,
+  "nome": "CORREA PRESENTES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3138660805291, -26.423804282956713]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 69,
+  "nome": "PROTEK NET",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "INFORMATICA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31382870729111, -26.42380508824747]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 70,
+  "nome": "SUPER LOJÃO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31358230281784, -26.423768668324712]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 71,
+  "nome": "FARMÁCIA FARMAGEM",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "FARMACIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.312788464154465, -26.423691365312685]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 72,
+  "nome": "MOACIR CABELEREIRO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SALAO_BELEZA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31271537396167, -26.4236793553482]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 73,
+  "nome": "AGROPECUARIA GENERAL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "AGROPECUARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31249006841326, -26.423654134418694]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 74,
+  "nome": "SUPERMERCADO LIESCH",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SUPERMERCADO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31155681176989, -26.423451998924843]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 75,
+  "nome": "COLÉGIO ESTADUAL PEDRO ARAÚJO NETO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "ESCOLA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31589535494066, -26.428760665992062]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 76,
+  "nome": "LIZA FLORES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "FLORICULTURA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31110363073392, -26.423193870495314]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 77,
+  "nome": "PADOKA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "PADARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31588623741276, -26.427945081991925]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 78,
+  "nome": "SABOR DAS MASSAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31560650068332, -26.42809933384519]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 79,
+  "nome": "TIO PATINHAS CONVENIÊNCIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "CONVENIENCIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.315564926444615, -26.42811554667538]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 80,
+  "nome": "SORVETERIA EMER",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SORVETERIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.314955209134, -26.423629366019753]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 81,
+  "nome": "CM STUDIO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SALAO_BELEZA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31107840416116, -26.423186039667307]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 82,
+  "nome": "EZ CALÇADOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "CALCADOS",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.314846993458374, -26.423097316606857]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 83,
+  "nome": "CONSULTÓRIO ODONTOLÓGICO DRA. PAOLA MAKSIMAVIC",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SAUDE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3158877664251, -26.428312354191647]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 84,
+  "nome": "HOTEL NOSSA SENHORA APARECIDA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "HOTEL",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31471196741381, -26.423320683083336]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 85,
+  "nome": "JULIE CAMA MESA E BANHO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.316720896797065, -26.42879975270892]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 86,
+  "nome": "LOJAS QUERO QUERO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "MATERIAIS_CONSTRUCAO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31473236829306, -26.423378144477088]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 87,
+  "nome": "MANEKU'S CUCINA ITALIANA E PIZZARIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31869694281764, -26.430388631906833]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 88,
+  "nome": "CARTÓRIO DE REGISTRO CIVIL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SERVICO_PUBLICO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.317819527644694, -26.42950515157831]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 89,
+  "nome": "V VET CLÍNICA VETERINÁRIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "VETERINARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31729795468073, -26.42937889418246]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 90,
+  "nome": "QUEBRA NOZES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31079272636274, -26.42300971601877]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 91,
+  "nome": "SORVETERIA DO ODAIR",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SORVETERIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31852117316908, -26.429258632812513]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 92,
+  "nome": "PREFEITURA MUNICIPAL DE GENERAL CARNEIRO - PR",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SERVICO_PUBLICO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31823252309035, -26.4289394185834]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 93,
+  "nome": "GLEDSON DISTRIBUIDORA E TABACARIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "TABACARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.310596899481034, -26.422888109407225]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 94,
+  "nome": "LEK LANCHES BAR E PIZZARIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31889194926623, -26.428505732532418]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 95,
+  "nome": "LOJA FAGUNDES",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3182573370606, -26.4284975297814]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 96,
+  "nome": "GAL LAB ANÁLISES CLÍNICAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LABORATORIO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.318443724332596, -26.42825655855727]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},{
+  "id": 97,
+  "nome": "LANCHONETE DO ZÉ",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LANCHONETE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31800087300011, -26.428134619717298]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 98,
+  "nome": "SALÃO DA INÊS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "SALAO_BELEZA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31049398317423, -26.42283946676216]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},
+{
+  "id": 99,
+  "nome": "BICICLETARIA BRASIL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "BICICLETARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31789492574475, -26.4280667660134]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 100,
+  "nome": "AILOS CIVIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "COOPERATIVA_CREDITO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.318002214100304, -26.42761220523109]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 101,
+  "nome": "BAR E LANCHONETE DO TONHO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "BAR",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.310438236799705, -26.422798504377013]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 102,
+  "nome": "CONSULTÓRIO ODONTOLÓGICO GRANDO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SAUDE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31804638155782, -26.42770311836626]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 103,
+  "nome": "ALZENI SILVA STUDIO DE BELEZA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "SALAO_BELEZA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3097735688924, -26.422370959863436]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 104,
+  "nome": "OMEGA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.317520668596146, -26.42774515177033]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 105,
+  "nome": "IGREJA EVANGÉLICA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "IGREJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.30938906287834, -26.42216870779996]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 106,
+  "nome": "GIROTTO AUTO PEÇAS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "AUTO_PECAS",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31749485029865, -26.427410117449295]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 107,
+  "nome": "BAR",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "BAR",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.309105463408216, -26.422020649900958]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 108,
+  "nome": "LOTERIAS GAL CARNEIRO",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "LOTERICA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31700777668657, -26.427269825466965]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 109,
+  "nome": "MERCEARIA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "MERCADO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.3076789292424, -26.421362686985344]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 110,
+  "nome": "BANCO DO BRASIL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "BANCO",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31682422261962, -26.427579440461574]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 111,
+  "nome": "SANDI'S SHAWARMA E COMIDA CASEIRA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31653831896804, -26.4275111420422]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 112,
+  "nome": "SALÃO DA FRANCI",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "SALAO_BELEZA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.308104303867715, -26.42078365379161]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 113,
+  "nome": "HARU SUSHI",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "INACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31546327205946, -26.426465647700294]
+  },
+  "temRampa": false,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": false
+},{
+  "id": 114,
+  "nome": "LOJA SILVA",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "LOJA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.315615706514436, -26.426087806330138]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 115,
+  "nome": "AUTOESCOLA ROTA SUL",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "AUTOESCOLA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31511347976107, -26.42528101871735]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 116,
+  "nome": "PACATO ESCAPAMENTOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "OFICINA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31645123691546, -26.423328475595415]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 117,
+  "nome": "PANIFICADORA TRIGOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "PADARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.316978184132005, -26.423243725265316]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 118,
+  "nome": "ESCOLA MUNICIPAL MARIA JOSÉ KUKUL DOS ANJOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "ESCOLA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.31796347546158, -26.422442502804714]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": true,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 119,
+  "nome": "PANIFICADORA BOM CAFÉ",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "PARCIALMENTE",
+  "categoria": "PADARIA",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.309511098223105, -26.42146935993486]
+  },
+  "temRampa": true,
+  "temBanheiroAcessivel": false,
+  "temElevador": false,
+  "temPortaLarga": true
+},
+{
+  "id": 120,
+  "nome": "RESTAURANTE LEMOS",
+  "descricao": "General Carneiro - PR",
+  "statusAcessibilidade": "ACESSIVEL",
+  "categoria": "RESTAURANTE",
+  "localizacao": {
+    "type": "Point",
+    "coordinates": [-51.314821936085785, -26.42325019457818]
   },
   "temRampa": true,
   "temBanheiroAcessivel": true,
