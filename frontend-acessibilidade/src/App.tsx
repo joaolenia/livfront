@@ -25,6 +25,14 @@ function App() {
     }
   }
 
+  function handleAdicionarLugar(lugar: any) {
+    console.log('Adicionar lugar:', lugar);
+  }
+
+  function handleCadastrarUsuario(usuario: any) {
+    console.log('Cadastrar usuário:', usuario);
+  }
+
   return (
     <Routes>
 
@@ -45,11 +53,11 @@ function App() {
 
       <Route
         path="/cadastro"
-        element={<CadastroLugares />}
+        element={<CadastroLugares onAdicionarLugar={handleAdicionarLugar} />}
       />
       <Route
         path="/usuarios"
-        element={<CadastroUsuarios />}
+        element={<CadastroUsuarios onCadastrarUsuario={handleCadastrarUsuario} />}
       />
 
     </Routes>
