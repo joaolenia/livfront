@@ -93,7 +93,7 @@ export function CadastroLugares({
    
 
         <img
-          src="/fundo.png"
+          src="/fundocad.png"
           alt="Mapa"
           className="cad-image"
         />

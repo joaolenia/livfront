@@ -41,7 +41,7 @@ body{
 .cad-image{
   width:100%;
   max-width:320px;
-  height:220px;
+  height:650px;
 
   object-fit:cover;
   border-radius:20px;
@@ -68,7 +68,7 @@ body{
 ========================= */
 
 .cad-content{
-  padding:30px;
+  padding:40px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -97,7 +97,7 @@ body{
   border:none;
   border-radius:12px;
 
-  background:#2563eb;
+  background:#2f6beb;
   color:#fff;
 
   font-weight:700;
