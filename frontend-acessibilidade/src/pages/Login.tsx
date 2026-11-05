@@ -33,7 +33,7 @@ export function Login({ onLogin }: Props) {
           <div className="input-group">
             <label>Email</label>
             <input
-              type="email"
+              type="text"
               placeholder="Digite seu email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

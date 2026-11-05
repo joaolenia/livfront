@@ -16,7 +16,7 @@ function App() {
 
   function handleLogin(email: string, senha: string) {
 
-    if (email === 'admin@email.com' && senha === '123456') {
+    if (email === 'admin' && senha === 'admin') {
       
       navigate('/home');
 
