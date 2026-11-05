@@ -1,5 +1,7 @@
 import './Home.css';
 
+import estabelecimentos from '../mock/stabelecimentos.json';
+
 import type { Lugar } from '../types/lugar';
 import { Mapa } from '../components/Mapa';
 
@@ -43,70 +45,17 @@ export function Home() {
   const [textoFiltro, setTextoFiltro] =
     useState('☰ Filtros');
 
-  useEffect(() => {
+    useEffect(() => {
 
-    const dados: Lugar[] = [
+  const dados = estabelecimentos as Lugar[];
 
-      {
-        id: 1,
-        nome: 'Escola Elay',
-        descricao: 'R. Carlos Rotta, X - Gen. Carneiro',
-        statusAcessibilidade: 'ACESSIVEL',
-        categoria: 'ESCOLA',
+  setLugares(dados);
 
-        localizacao: {
-          type: 'Point',
-          coordinates: [-51.306651, -26.426072],
-        },
-
-        temRampa: true,
-        temBanheiroAcessivel: true,
-        temElevador: false,
-        temPortaLarga: true,
-      },
-
-      {
-        id: 2,
-        nome: 'Mercearia Bom Jesus',
-        descricao: 'R. Dom Carlos Eduardo Savóia Bandeira de Mello, X - Gen. Carneiro',
-        statusAcessibilidade: 'PARCIALMENTE ACESSIVEL',
-        categoria: 'MERCADO',
-
-        localizacao: {
-          type: 'Point',
-          coordinates: [-51.30490685753136, -26.425417544594616],
-        },
-
-        temRampa: false,
-        temBanheiroAcessivel: false,
-        temElevador: false,
-        temPortaLarga: true,
-      },
-
-      {
-        id: 3,
-        nome: 'Farmácia São Miguel',
-        descricao: 'Rua Tancredo Neves, X - Gen. Carneiro',
-        statusAcessibilidade: 'INACESSIVEL',
-        categoria: 'FARMACIA',
-
-        localizacao: {
-          type: 'Point',
-          coordinates: [-51.305645646717565, -26.42419511158366],
-        },
-
-        temRampa: false,
-        temBanheiroAcessivel: false,
-        temElevador: false,
-        temPortaLarga: false,
-      },
-
-    ];
-
-    setLugares(dados);
+  if (dados.length > 0) {
     setLugarSelecionado(dados[0]);
+  }
 
-  }, []);
+}, []);
 
   const lugaresFiltrados =
     useMemo(() => {

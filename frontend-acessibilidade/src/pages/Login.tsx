@@ -18,7 +18,7 @@ export function Login({ onLogin }: Props) {
   return (
     <div className="login-container">
 
-   
+
 
       {/* CONTEÚDO */}
       <main className="login-content">
@@ -70,12 +70,12 @@ export function Login({ onLogin }: Props) {
             Entrar
           </button>
 
-<Link to="/usuarios" className="register-link">
-          <div className="register-link">
-            Não possui conta?
-            <span> Criar conta</span>
-          </div>
-        </Link>
+          <Link to="/usuarios" className="register-link">
+            <div className="register-link">
+              Não possui conta?
+              <span> Criar conta</span>
+            </div>
+          </Link>
 
         </form>
 

@@ -10,10 +10,10 @@ export function Perfil() {
         useState(false);
 
     const [nome, setNome] =
-        useState('João Pedro');
+        useState('Fulano de tal');
 
     const [email, setEmail] =
-        useState('joao@email.com');
+        useState('funalo@email.com');
 
     const [cidade, setCidade] =
         useState('General Carneiro');
