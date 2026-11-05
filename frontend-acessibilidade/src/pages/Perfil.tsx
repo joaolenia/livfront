@@ -10,10 +10,10 @@ export function Perfil() {
         useState(false);
 
     const [nome, setNome] =
-        useState('Fulano de tal');
+        useState('Usuário');
 
     const [email, setEmail] =
-        useState('funalo@email.com');
+        useState('usuario@email.com');
 
     const [cidade, setCidade] =
         useState('General Carneiro');
@@ -71,7 +71,7 @@ export function Perfil() {
                         <div className="per-perfil-avatar-wrapper">
 
                             <img
-                                src="https://i.pravatar.cc/300"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIsQ35TCaASNQK89jXBFUb6L5ueCeyuynE0GegI3GzWg&s=10"
                                 alt="Perfil"
                                 className="per-perfil-avatar"
                             />

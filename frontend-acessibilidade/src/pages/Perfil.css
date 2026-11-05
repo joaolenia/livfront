@@ -27,19 +27,17 @@
 
   background-size: cover;
   background-position: center;
-
   position: relative;
 }
 
 .per-perfil-banner-overlay {
   width: 100%;
-  height: 100%;
+  min-height: 340px;
 
   padding: 30px 50px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 /* ===========================
@@ -51,20 +49,20 @@
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+
+  position: relative;
+  z-index: 10;
 }
 
 .per-perfil-back,
 .per-perfil-edit {
   min-height: 48px;
-
   border: none;
   border-radius: 16px;
-
   padding: 0 22px;
 
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
 
   transition: 0.3s;
@@ -96,11 +94,16 @@
   gap: 24px;
 
   position: relative;
-  top: -40px;
+  z-index: 2;
+
+  /* Afasta a foto dos botões */
+  margin-top: 40px;
+  top: 0;
 }
 
 .per-perfil-avatar-wrapper {
   position: relative;
+  flex-shrink: 0;
 }
 
 .per-perfil-avatar {
@@ -117,7 +120,6 @@
 
 .per-perfil-camera {
   position: absolute;
-
   right: 0;
   bottom: 8px;
 
@@ -149,14 +151,12 @@
 
 .per-perfil-content {
   max-width: 1400px;
-
-  margin: -60px auto 0;
+  margin: -35px auto 0;
 
   padding: 0 30px 40px;
 
   display: grid;
   grid-template-columns: 340px 1fr;
-
   gap: 24px;
 
   position: relative;
@@ -169,9 +169,7 @@
 
 .per-perfil-card {
   background: white;
-
   border-radius: 24px;
-
   padding: 24px;
 
   border: 1px solid #e2e8f0;
@@ -227,31 +225,55 @@
 
 .per-perfil-settings button {
   height: 56px;
-
+  width: 100%;
   border: none;
   border-radius: 16px;
 
   background: #f8fafc;
-
   padding: 0 18px;
 
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
+  text-align: left;
   cursor: pointer;
 
   font-size: 15px;
   font-weight: 600;
+  color: #334155;
 
-  transition: .3s;
+  transition: all 0.3s ease;
 }
 
 .per-perfil-settings button:hover {
   background: #eff6ff;
+  transform: translateX(4px);
 }
 
-.per-perfil-logout {
-  background: #fee2e2 !important;
-  color: #b91c1c !important;
+/* Ícones */
+
+.per-perfil-setting-icon {
+  width: 21px;
+  height: 21px;
+  color: #003b7a;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+/* Botão sair */
+
+.per-perfil-settings .per-perfil-logout {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.per-perfil-settings .per-perfil-logout:hover {
+  background: #fee2e2;
+}
+
+.per-perfil-settings .per-perfil-logout .per-perfil-setting-icon {
+  color: #dc2626;
 }
 
 /* ===========================
@@ -260,12 +282,9 @@
 
 .per-perfil-stats {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
   gap: 18px;
-
   margin-bottom: 24px;
 }
 
@@ -278,11 +297,9 @@
     );
 
   border-radius: 22px;
-
   padding: 28px;
 
   color: white;
-
   min-height: 150px;
 
   display: flex;
@@ -316,11 +333,9 @@
   gap: 14px;
 
   padding: 18px;
-
   border-radius: 18px;
 
   background: #f8fafc;
-
   border: 1px solid #e2e8f0;
 }
 
@@ -328,6 +343,7 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .per-verde {
@@ -357,7 +373,6 @@
 =========================== */
 
 @media (max-width: 1024px) {
-
   .per-perfil-content {
     grid-template-columns: 1fr;
   }
@@ -369,156 +384,91 @@
   .per-perfil-right {
     order: 1;
   }
-
 }
 
-/* TABLET */
-
-@media (max-width: 1200px) {
-
-  .sidebar {
-    width: 320px;
-  }
-
-  .top-search {
-    flex-wrap: wrap;
-  }
-
-}
-
-/* MOBILE */
+/* ===========================
+   MOBILE
+=========================== */
 
 @media (max-width: 768px) {
-
-  .home-container {
-    flex-direction: column;
+  .per-perfil-banner-overlay {
+    padding: 25px 20px;
   }
 
-  .sidebar {
-    position: fixed;
-
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 40vh;
-
-    border-radius: 25px 25px 0 0;
-
-    z-index: 2000;
-
-    background: white;
-
-    transform: translateY(0);
-
-    box-shadow:
-      0 -10px 30px rgba(0,0,0,.2);
+  .per-perfil-user {
+    margin-top: 45px;
+    gap: 16px;
   }
 
-  .sidebar-top {
-    display: none;
+  .per-perfil-avatar {
+    width: 100px;
+    height: 100px;
   }
 
-  .sidebar-scroll {
-    padding: 15px;
+  .per-perfil-user-info h1 {
+    font-size: 25px;
   }
 
-  .info-box {
-    box-shadow: none;
-    padding: 0;
+  .per-perfil-content {
+    padding: 0 15px 30px;
+    margin-top: -20px;
   }
 
-  .map-content {
-    width: 100%;
-    height: 100vh;
+  .per-perfil-stats {
+    grid-template-columns: 1fr;
   }
 
-  .top-search {
-
-    top: 10px;
-    left: 10px;
-    right: 10px;
-
-    flex-wrap: wrap;
-    gap: 8px;
+  .per-perfil-card {
+    padding: 20px;
   }
-
-  .search-box {
-    width: 100%;
-    height: 50px;
-  }
-
-  .search-box input {
-    font-size: 14px;
-  }
-
-  .filter-container {
-    flex: 1;
-  }
-
-  .filter-btn {
-    width: 100%;
-    min-width: auto;
-    height: 48px;
-  }
-
-  .perfil-btn,
-  .cadastro-btn {
-    flex: 1;
-    height: 48px;
-  }
-
-  .acoes-lugar {
-    margin-top: 15px;
-  }
-
-  .btn-avaliacoes,
-  .btn-avaliar {
-    height: 50px;
-  }
-
-  .info-header h2 {
-    font-size: 16px;
-  }
-
 }
 
-/* CELULARES PEQUENOS */
+/* ===========================
+   CELULARES PEQUENOS
+=========================== */
 
 @media (max-width: 480px) {
-
-  .sidebar {
-    height: 45vh;
+  .per-perfil-banner-overlay {
+    padding: 20px 15px;
   }
 
-  .top-search {
-    gap: 6px;
+  .per-perfil-topbar {
+    gap: 10px;
   }
 
-  .perfil-btn,
-  .cadastro-btn,
-  .filter-btn {
+  .per-perfil-back,
+  .per-perfil-edit {
+    min-height: 42px;
+    padding: 0 14px;
     font-size: 12px;
-    padding: 0 10px;
   }
 
-  .btn-icon {
-    width: 18px;
-    height: 18px;
+  .per-perfil-user {
+    margin-top: 40px;
+    gap: 12px;
   }
 
-  .info-header {
-    align-items: flex-start;
+  .per-perfil-avatar {
+    width: 85px;
+    height: 85px;
   }
 
-  .status-icon {
-    width: 42px;
-    height: 42px;
+  .per-perfil-camera {
+    width: 32px;
+    height: 32px;
   }
 
-  .status-icon img {
-    width: 20px;
-    height: 20px;
+  .per-perfil-user-info h1 {
+    font-size: 21px;
+  }
+
+  .per-perfil-user-info p {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .per-perfil-stat-card h3 {
+    font-size: 32px;
   }
 
 }
